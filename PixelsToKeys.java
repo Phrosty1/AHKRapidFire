@@ -9,9 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,7 +33,7 @@ public class PixelsToKeys extends JFrame {
 				new PixelsToKeys().setVisible(true);
 			}
 		});
-		loadKeyMap("PixelsToKeys.txt");
+		loadKeyMap();
 
 		spLog("begin thread call");
 		new Thread(taskPressKeys).start();
@@ -43,8 +41,8 @@ public class PixelsToKeys extends JFrame {
 		spLog("end thread call");
 	}
 
-	static String firstPixelCheck = "";
 	static int constantPixel = 0;
+	static int constantLocX = 0, constantLocY=5;
 	static int[] aKeyCodeMap = new int[32];
 	static ArrayList<KeyMapEntry> tKeyMapEntries = new ArrayList<>();
 	static ArrayList<MouseMapEntry> tMouseMapEntries = new ArrayList<>();
@@ -85,14 +83,21 @@ public class PixelsToKeys extends JFrame {
 		return new StringBuilder().append("(").append(mouseLoc.x).append(",").append(mouseLoc.y).append(")").toString();
 	}
 
-	private static void loadKeyMap(String filename) {
+	private static void loadKeyMap() {
 		// ConstantPixel = 0x010203
-		// OnlyWhenHoldingKeyCode = 64 -- 6 key
+		// ConstantLocX = 0
+		// ConstantLocY = 5
 		// KeyMapValues = 87 w, 83 s, 65 a, 68 d, 69 e, 88 x
 		// MouseMapValues = mousebtn1, mousebtn2, mousebtn3, leftmouse, upspeed1, downspeed1, leftspeed1, rightspeed1
-		File mapFile = new File(filename);
+		File mapFile = new File("PixelsToKeys.txt");
+		if (!mapFile.exists()) {
+			File dir = new File((new File("")).getAbsolutePath());
+			File[] aFiles = dir.listFiles((dir1, name) -> name.endsWith(".config"));
+			if(aFiles.length>0) mapFile = aFiles[0];
+		}
+		spLog("Config File = " + mapFile.getName());
 		if (mapFile.exists()) {
-			try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filename)))) {
+			try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(mapFile)))) {
 				String line;
 				while ((line = bufferedReader.readLine()) != null) {
 					spLog(line);
@@ -102,9 +107,18 @@ public class PixelsToKeys extends JFrame {
 							String val = line.substring(line.indexOf("=") + 1).trim();
 							val = getRegSubstr(val, "(\\w+)"); // word
 							if (val.length() > 6) val = val.substring(val.length() - 6);
-							firstPixelCheck = val;
 							constantPixel = Integer.parseUnsignedInt("ff" + val, 16);
 							spLog("ConstantPixel=" + constantPixel);
+						} else if (line.toUpperCase().trim().startsWith("ConstantLocX".toUpperCase())) {
+							String val = line.substring(line.indexOf("=") + 1).trim();
+							val = getRegSubstr(val, "(\\d+)"); // digit
+							if (!val.isEmpty()) constantLocX = Integer.parseInt(val);
+							spLog("ConstantLocX=" + constantLocX);
+						} else if (line.toUpperCase().trim().startsWith("ConstantLocY".toUpperCase())) {
+							String val = line.substring(line.indexOf("=") + 1).trim();
+							val = getRegSubstr(val, "(\\d+)"); // digit
+							if (!val.isEmpty()) constantLocY = Integer.parseInt(val);
+							spLog("ConstantLocY=" + constantLocY);
 						} else if (line.toUpperCase().trim().startsWith("OnlyWhenHoldingKeyCode".toUpperCase())) {
 							String val = line.substring(line.indexOf("=") + 1).trim();
 							val = getRegSubstr(val, "(\\d+)"); // digit
@@ -142,17 +156,7 @@ public class PixelsToKeys extends JFrame {
 							}
 						}
 					}
-
-					// if(line.split(regex))
-					//tKeyMapEntries.add(new KeyMapEntry(i++, cmd))
 				}
-				//	String line = bufferedReader.readLine();
-				//	firstPixelCheck = line;
-				//	int i = 0;
-				//	while ((line = bufferedReader.readLine()) != null) {
-				//		if (i < aKeyCodeMap.length) aKeyCodeMap[i] = Integer.parseInt(line);
-				//		i++;
-				//	}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -165,7 +169,7 @@ public class PixelsToKeys extends JFrame {
 		try {
 			long cycleEndTime = System.currentTimeMillis(), cycleBeginTime = cycleEndTime, cycleTotTime = cycleEndTime - cycleBeginTime;
 			Robot robot = new Robot();
-			Rectangle rect = new Rectangle(0, 5, 3, 1); // x, y, width, height
+			Rectangle rect = new Rectangle(constantLocX, constantLocY, 3, 1); // x, y, width, height
 			BufferedImage tmpcap = robot.createScreenCapture(rect); // takes 15ms
 			int rgb0 = tmpcap.getRGB(0, 0), rgb1 = tmpcap.getRGB(1, 0), rgb2 = tmpcap.getRGB(2, 0);
 			String txt = "";
