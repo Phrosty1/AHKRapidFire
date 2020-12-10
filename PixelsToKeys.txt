@@ -1,0 +1,4 @@
+ConstantPixel = 0x010203
+OnlyWhenHoldingKeyCode = 64 -- 6 key
+KeyMapValues = 87 w, 83 s, 65 a, 68 d, 69 e, 88 x
+MouseMapValues = mousebtn1, mousebtn3, upspeed1, downspeed1, leftspeed1, rightspeed1
