@@ -12,7 +12,9 @@
 ; directive to be recognized, and you cannot have whitespace in front of them
 
 # lua files for the addon, which can come before or after XML files
+PixelsToKeys.lua
 AHKRapidFire.lua
+Bindings.xml
 
 # XML files follow the same rules as the lua files, regarding folders
 #AHKRapidFire.xml
