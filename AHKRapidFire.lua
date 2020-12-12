@@ -4,7 +4,8 @@ AHKRapidFire.savedVars = {}
 AHKRapidFire.globalSavedVars = {}
 AHKRapidFire.name = "AHKRapidFire"
 
-AHKRapidFire.pixelControl = LibPixelControl.new("010203", 0, 7)
+--AHKRapidFire.pixelControl = LibPixelControl.new("010203", 0, 7)
+local pixelControl = LibPixelControl.new("010203", 0, 7)
 
 local ms_time = GetGameTimeMilliseconds()
 local function dmsg(txt)
@@ -16,15 +17,17 @@ function AHKRapidFire:OpenFire()
 	d("OpenFire")
 	--local tmp = PixelsToKeys:new(cnstColor, cnstX, cnstY)
 	--PixelsToKeys:example()
-	local tmp = AHKRapidFire.pixelControl -- LibPixelControl.new("010203", 0, 7)
-	d("tmp.cnstY:"..tostring(tmp.cnstY))
-	tmp.SetIndOn(10)
-	tmp.SetPixelColors()
+	--local tmp = pixelControl -- LibPixelControl.new("010203", 0, 7)
+	--d("tmp.cnstY:"..tostring(tmp.cnstY))
+	--tmp.SetIndOn(10)
+	--tmp.SetPixelColors()
 	--tmp.msg("YY1")
 	--tmp.msg2("YY2")
+	pixelControl.SetIndOn(3)
 end
 function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
+	pixelControl.SetIndOff(3)
 end
 
 

@@ -14,28 +14,6 @@ lib = {} -- tmpbri
 --end
 --function lib.dispmsg(txt) d("Findme:"..tostring(txt)) end
 
-local function GetColorFromHex(hex, alpha)
-	local r, g, b = hex:match("(%w%w)(%w%w)(%w%w)")
-	r = (tonumber(r, 16) or 0) / 255
-	g = (tonumber(g, 16) or 0) / 255
-	b = (tonumber(b, 16) or 0) / 255
-	return r, g, b, alpha or 1
-end
-local function GetRGBFromKeystates(arrKS)
-	r = (tonumber((arrKS[1] .. arrKS[2]), 16) or 0) / 255
-	g = (tonumber((arrKS[3] .. arrKS[4]), 16) or 0) / 255
-	b = (tonumber((arrKS[5] .. arrKS[6]), 16) or 0) / 255
-	return r, g, b
-end
-local function GetIntFromBin(bin)
-	bin = string.reverse(bin)
-	local sum = 0
-	for i = 1, string.len(bin) do
-		num = string.sub(bin, i,i) == "1" and 1 or 0
-		sum = sum + num * math.pow(2, i-1)
-	end
-	return sum
-end
 local function Subrange(t, first, last)
 	local sub = {}
 	for i=first,last do sub[#sub + 1] = t[i] end
@@ -51,6 +29,13 @@ local function GetRGBFromBoolRange(bools)
 	g = (GetIntFromBool(Subrange(bools,9,16)) or 0) / 255
 	b = (GetIntFromBool(Subrange(bools,17,24)) or 0) / 255
 	return r, g, b
+end
+local function GetColorFromHex(hex, alpha)
+	local r, g, b = hex:match("(%w%w)(%w%w)(%w%w)")
+	r = (tonumber(r, 16) or 0) / 255
+	g = (tonumber(g, 16) or 0) / 255
+	b = (tonumber(b, 16) or 0) / 255
+	return r, g, b, alpha or 1
 end
 
 function lib.new(cnstColor, cnstX, cnstY)
@@ -73,24 +58,23 @@ function lib.new(cnstColor, cnstX, cnstY)
 	for i=1,48 do bools[i] = 0 end
 
 	local result = {
-		cnstColor = cnstColor,
-		cnstX = cnstX,
-		cnstY = cnstY,
+		--cnstColor = cnstColor,
+		--cnstX = cnstX,
+		--cnstY = cnstY,
 		bools = bools,
-		SetPixelColors = function()
-			d("SetPixelColors")
-			colorDataLine2:SetColor(GetRGBFromBoolRange(Subrange(bools,1,24)))
-			colorDataLine3:SetColor(GetRGBFromBoolRange(Subrange(bools,25,48)))
-		end,
+		colorDataLine1 = colorDataLine1,
+		colorDataLine2 = colorDataLine2,
+		colorDataLine3 = colorDataLine3,
 		SetIndOn = function(idx)
 			bools[idx] = 1
 			colorDataLine2:SetColor(GetRGBFromBoolRange(Subrange(bools,1,24)))
 			colorDataLine3:SetColor(GetRGBFromBoolRange(Subrange(bools,25,48)))
 		end,
-		SetIndOff = function(idx) bools[idx] = 0 SetPixelColors() end,
-		colorDataLine1 = colorDataLine1,
-		colorDataLine2 = colorDataLine2,
-		colorDataLine3 = colorDataLine3,
+		SetIndOff = function(idx)
+			bools[idx] = 0
+			colorDataLine2:SetColor(GetRGBFromBoolRange(Subrange(bools,1,24)))
+			colorDataLine3:SetColor(GetRGBFromBoolRange(Subrange(bools,25,48)))
+		end,
 		msg2 = lib.dispmsg
 	}
 
