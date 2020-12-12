@@ -2,8 +2,8 @@
    <Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
       <Category name="Rapid Fire">
          <Action name="RF_FIRING">
-            <Down>AHKRapidFire.OpenFire()</Down>
-            <Up>AHKRapidFire.CeaseFire()</Up>
+            <Down>AHKRapidFire:OpenFire()</Down>
+            <Up>AHKRapidFire:CeaseFire()</Up>
          </Action>
       </Category>
    </Layer>

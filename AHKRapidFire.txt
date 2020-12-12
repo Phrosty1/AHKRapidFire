@@ -3,7 +3,7 @@
 ## APIVersion: 100032
 ## AddOnVersion: 001
 ## Version: 0.01
-## DependsOn: 
+## DependsOn: LibPixelControl
 ## SavedVariables: AHKRapidFireSavedVariables
 
 # blank lines are ignored
@@ -12,12 +12,9 @@
 ; directive to be recognized, and you cannot have whitespace in front of them
 
 # lua files for the addon, which can come before or after XML files
-PixelsToKeys.lua
+#PixelsToKeys.lua
 AHKRapidFire.lua
 Bindings.xml
-
-# XML files follow the same rules as the lua files, regarding folders
-#AHKRapidFire.xml
 
 # This Add-on is not created by, affiliated with, or sponsored by, ZeniMax Media Inc. or its affiliates.
 # The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States

@@ -4,7 +4,7 @@ AHKRapidFire.savedVars = {}
 AHKRapidFire.globalSavedVars = {}
 AHKRapidFire.name = "AHKRapidFire"
 
-local PixelsToKeys
+--local PixelsToKeys
 
 local ms_time = GetGameTimeMilliseconds()
 local function dmsg(txt)
@@ -12,18 +12,23 @@ local function dmsg(txt)
 	ms_time = GetGameTimeMilliseconds()
 end
 
-function AHKRapidFire.OpenFire()
+function AHKRapidFire:OpenFire()
 	d("OpenFire")
-	local tmp = PixelsToKeys:new() -- (cnstColor, cnstX, cnstY)
+	--local tmp = PixelsToKeys:new(cnstColor, cnstX, cnstY)
+	--PixelsToKeys:example()
+	LibPixelControl.Findme()
 end
-function AHKRapidFire.CeaseFire()
+function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
 end
+
+
+-- local item = PotMaker.Ingredient:new {name = zo_strformat(SI_TOOLTIP_ITEM_NAME, reagent), icon = TEXTURE_REAGENTUNKNOWN, traits = addTraits(newTraits), iconTraits = {}, pack = {}}
 
 function AHKRapidFire:Initialize()
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
 	--AHKRapidFire.PTK = PixelsToKeys:new("010203", 0, 6) -- (cnstColor, cnstX, cnstY)
-
+	LibPixelControl.Findme()
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
