@@ -16,7 +16,10 @@ function AHKRapidFire:OpenFire()
 	d("OpenFire")
 	--local tmp = PixelsToKeys:new(cnstColor, cnstX, cnstY)
 	--PixelsToKeys:example()
-	LibPixelControl.Findme()
+	local tmp = LibPixelControl.new("010203", 0, 7)
+	d("tmp.cnstY:"..tostring(tmp.cnstY))
+	tmp.msg("calling tmp.msg")
+	tmp.msg2("calling tmp.msg2")
 end
 function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
@@ -28,7 +31,7 @@ end
 function AHKRapidFire:Initialize()
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
 	--AHKRapidFire.PTK = PixelsToKeys:new("010203", 0, 6) -- (cnstColor, cnstX, cnstY)
-	LibPixelControl.Findme()
+	d("FindmeInitText") -- does not show. wait until player active
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
