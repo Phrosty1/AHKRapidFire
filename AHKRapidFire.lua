@@ -4,30 +4,56 @@ AHKRapidFire.savedVars = {}
 AHKRapidFire.globalSavedVars = {}
 AHKRapidFire.name = "AHKRapidFire"
 
---AHKRapidFire.pixelControl = LibPixelControl.new("010203", 0, 7)
-local pixelControl = LibPixelControl.new("010203", 0, 7)
-
 local ms_time = GetGameTimeMilliseconds()
 local function dmsg(txt)
 	d((GetGameTimeMilliseconds() - ms_time) .. ") " .. txt)
 	ms_time = GetGameTimeMilliseconds()
 end
 
+local ptk = LibPixelControl.new("010203", 0, 7)
+
+function AHKRapidFire:PixelDemo()
+	--d("ptk.VK_A:"..tostring(ptk.VK_A))
+	t=1000
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_A) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_A) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_D) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_D) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_W) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_W) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_S) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_S) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_LEFT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_LEFT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_RIGHT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_RIGHT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_UP) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_UP) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_DOWN) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_DOWN) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_RIGHT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_RIGHT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_LEFT) end, t) t=t+50
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_LEFT) end, t)
+end
+
 function AHKRapidFire:OpenFire()
 	d("OpenFire")
-	--local tmp = PixelsToKeys:new(cnstColor, cnstX, cnstY)
-	--PixelsToKeys:example()
-	--local tmp = pixelControl -- LibPixelControl.new("010203", 0, 7)
-	--d("tmp.cnstY:"..tostring(tmp.cnstY))
-	--tmp.SetIndOn(10)
-	--tmp.SetPixelColors()
-	--tmp.msg("YY1")
-	--tmp.msg2("YY2")
-	pixelControl.SetIndOn(3)
+	ptk.SetIndOn(ptk.VK_A)
 end
 function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
-	pixelControl.SetIndOff(3)
+	ptk.SetIndOff(ptk.VK_A)
+	AHKRapidFire:PixelDemo()
 end
 
 
