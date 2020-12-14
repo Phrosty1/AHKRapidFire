@@ -56,6 +56,43 @@ function AHKRapidFire:CeaseFire()
 	AHKRapidFire:PixelDemo()
 end
 
+---- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
+--function OnCombatEvent(eventCode, abilityId)
+--	dmsg("OnCombatEvent: "..tostring(eventCode)
+--		.." result:"..tostring(result)
+--		.." isError:"..tostring(isError)
+--		.." abilityName:"..tostring(abilityName)
+--		.." abilityActionSlotType:"..tostring(abilityActionSlotType)
+--		.." sourceName:"..tostring(sourceName)
+--		.." sourceType:"..tostring(sourceType)
+--		.." targetName:"..tostring(targetName)
+--		.." targetType:"..tostring(targetType)
+--		.." hitValue:"..tostring(hitValue)
+--		.." powerType:"..tostring(powerType)
+--		.." damageType:"..tostring(damageType)
+--		.." sourceUnitId:"..tostring(sourceUnitId)
+--		.." targetUnitId:"..tostring(targetUnitId)
+--		.." abilityId:"..tostring(abilityId)
+--		.." overflow:"..tostring(overflow))
+--end
+
+
+-- EVENT_BEGIN_LOCKPICK (number eventCode)
+function AHKRapidFire:BeginLockpicking()
+	d("Lockpicking")
+	t=1000
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_RIGHT) end, t) t=t+2000
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_RIGHT) end, t)
+	t=t+0
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_LEFT) end, t) t=t+50
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_LEFT) end, t)
+
+	local chamberStress = GetSettingChamberStress()
+	local chamberSolved = IsChamberSolved(1)
+	d("chamberStress:"..tostring(chamberStress))
+	d("chamberSolved:"..tostring(chamberSolved))
+
+end
 
 -- local item = PotMaker.Ingredient:new {name = zo_strformat(SI_TOOLTIP_ITEM_NAME, reagent), icon = TEXTURE_REAGENTUNKNOWN, traits = addTraits(newTraits), iconTraits = {}, pack = {}}
 
@@ -70,6 +107,7 @@ end
 function AHKRapidFire.OnAddOnLoaded(event, addonName) -- The event fires each time *any* addon loads - but we only care about when our own addon loads.
     if addonName == AHKRapidFire.name then AHKRapidFire:Initialize() end
 	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_BEGIN_LOCKPICK, AHKRapidFire.BeginLockpicking)
 end
 
 -- Finally, we'll register our event handler function to be called when the proper event occurs.
