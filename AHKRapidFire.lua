@@ -77,21 +77,52 @@ end
 --end
 
 
+local function CheckLockPickStatus()
+	dmsg("Stress:"..tostring(GetSettingChamberStress()).." Chambers:"..tostring(IsChamberSolved(1))..":"..tostring(IsChamberSolved(2))..":"..tostring(IsChamberSolved(3))..":"..tostring(IsChamberSolved(4))..":"..tostring(IsChamberSolved(5)))
+	if GetSettingChamberStress() > 0 then
+		ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
+		EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
+		zo_callLater(function()
+						if IsChamberSolved(1) ~= true then
+							AHKRapidFire:MoveAndPickNext()
+						end
+					end, 50)
+
+		
+	end
+end
+function AHKRapidFire:PressPickUntilDone()
+	ptk.SetIndOn(ptk.VM_BTN_LEFT)
+	EVENT_MANAGER:RegisterForUpdate("AHKRapidFireLockpicker", 100, CheckLockPickStatus)
+end
+function AHKRapidFire:MoveAndPickNext()
+	dmsg("MoveAndPickNext")
+	if IsChamberSolved(1) ~= true then
+		ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
+		zo_callLater(function()
+						ptk.SetIndOff(ptk.VM_MOVE_10_LEFT)
+						AHKRapidFire:PressPickUntilDone()
+					end, 80)
+	end
+end
+function AHKRapidFire:EndLockpicking()
+	EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
+	ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
+end
 -- EVENT_BEGIN_LOCKPICK (number eventCode)
 function AHKRapidFire:BeginLockpicking()
 	d("Lockpicking")
-	t=1000
-	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_RIGHT) end, t) t=t+2000
-	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_RIGHT) end, t)
-	t=t+0
-	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_LEFT) end, t) t=t+50
-	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_LEFT) end, t)
+	
+	ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT)
+	zo_callLater(function()
+						ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT)
+						AHKRapidFire:PressPickUntilDone()
+					end, 500)
 
-	local chamberStress = GetSettingChamberStress()
-	local chamberSolved = IsChamberSolved(1)
-	d("chamberStress:"..tostring(chamberStress))
-	d("chamberSolved:"..tostring(chamberSolved))
-
+	--local chamberStress = GetSettingChamberStress()
+	--local chamberSolved = IsChamberSolved(1)
+	--d("chamberStress:"..tostring(chamberStress))
+	--d("chamberSolved:"..tostring(chamberSolved))
 end
 
 -- local item = PotMaker.Ingredient:new {name = zo_strformat(SI_TOOLTIP_ITEM_NAME, reagent), icon = TEXTURE_REAGENTUNKNOWN, traits = addTraits(newTraits), iconTraits = {}, pack = {}}
@@ -108,6 +139,9 @@ function AHKRapidFire.OnAddOnLoaded(event, addonName) -- The event fires each ti
     if addonName == AHKRapidFire.name then AHKRapidFire:Initialize() end
 	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_BEGIN_LOCKPICK, AHKRapidFire.BeginLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_FAILED, AHKRapidFire.EndLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
 end
 
 -- Finally, we'll register our event handler function to be called when the proper event occurs.
