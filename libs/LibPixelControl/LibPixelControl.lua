@@ -70,6 +70,13 @@ function lib.new(cnstColor, cnstX, cnstY)
 				d("no index:"..tostring(idx))
 			end
 		end,
+		IsIndOn = function(idx)
+			if idx then
+				return bools[idx] == 1
+			else
+				d("no index:"..tostring(idx))
+			end
+		end,
 		msg2 = lib.dispmsg,
 		VK_BACK_SPACE = 1,
 		VK_TAB = 2,

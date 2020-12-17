@@ -76,54 +76,75 @@ end
 --		.." overflow:"..tostring(overflow))
 --end
 
+--function AHKRapidFire:PressPickUntilDone()
+--	ptk.SetIndOn(ptk.VM_BTN_LEFT)
+--	EVENT_MANAGER:RegisterForUpdate("AHKRapidFireLockpicker", 100, CheckLockPickStatus)
+--end
+--function AHKRapidFire:MoveAndPickNext()
+--	dmsg("MoveAndPickNext")
+--	if IsChamberSolved(1) ~= true then
+--		ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
+--		zo_callLater(function()
+--						ptk.SetIndOff(ptk.VM_MOVE_10_LEFT)
+--						AHKRapidFire:PressPickUntilDone()
+--					end, 80)
+--	end
+--end
+--function AHKRapidFire:EndLockpicking()
+--	d("EndLockpicking")
+--	EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
+--	ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
+--end
+--function AHKRapidFire:BeginLockpicking()
+--	d("BeginLockpicking")
+--	ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT)
+--	zo_callLater(function()
+--						ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT)
+--						AHKRapidFire:PressPickUntilDone()
+--					end, 500)
+--end
 
-local function CheckLockPickStatus()
-	dmsg("Stress:"..tostring(GetSettingChamberStress()).." Chambers:"..tostring(IsChamberSolved(1))..":"..tostring(IsChamberSolved(2))..":"..tostring(IsChamberSolved(3))..":"..tostring(IsChamberSolved(4))..":"..tostring(IsChamberSolved(5)))
-	if GetSettingChamberStress() > 0 then
-		ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
-		EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
-		zo_callLater(function()
-						if IsChamberSolved(1) ~= true then
-							AHKRapidFire:MoveAndPickNext()
-						end
-					end, 50)
-
-		
-	end
-end
-function AHKRapidFire:PressPickUntilDone()
+function AHKRapidFire:BeginLockpicking()
+	d("BeginLockpicking")
 	ptk.SetIndOn(ptk.VM_BTN_LEFT)
-	EVENT_MANAGER:RegisterForUpdate("AHKRapidFireLockpicker", 100, CheckLockPickStatus)
-end
-function AHKRapidFire:MoveAndPickNext()
-	dmsg("MoveAndPickNext")
-	if IsChamberSolved(1) ~= true then
-		ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
-		zo_callLater(function()
-						ptk.SetIndOff(ptk.VM_MOVE_10_LEFT)
-						AHKRapidFire:PressPickUntilDone()
-					end, 80)
-	end
+	--EVENT_MANAGER:RegisterForUpdate("AHKRapidFireLockpicker", 100, CheckLockPickStatus)
 end
 function AHKRapidFire:EndLockpicking()
-	EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
+	d("EndLockpicking")
+	--EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
 	ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
+	ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT) -- stop pressing
 end
--- EVENT_BEGIN_LOCKPICK (number eventCode)
-function AHKRapidFire:BeginLockpicking()
-	d("Lockpicking")
-	
-	ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT)
-	zo_callLater(function()
-						ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT)
-						AHKRapidFire:PressPickUntilDone()
-					end, 500)
+local function CheckLockPickStatus()
+	dmsg("Stress:"..tostring(GetSettingChamberStress()).." Chambers:"..tostring(IsChamberSolved(1))..":"..tostring(IsChamberSolved(2))..":"..tostring(IsChamberSolved(3))..":"..tostring(IsChamberSolved(4))..":"..tostring(IsChamberSolved(5)))
+	--d("Stress:"..tostring(GetSettingChamberStress()).." State:"..tostring(GetChamberState(1))..":"..tostring(GetChamberState(2))..":"..tostring(GetChamberState(3))..":"..tostring(GetChamberState(4))..":"..tostring(GetChamberState(5)))
+	state1, prog1 = GetChamberState(1)
+	state2, prog2 = GetChamberState(2)
+	state3, prog3 = GetChamberState(3)
+	state4, prog4 = GetChamberState(4)
+	state5, prog5 = GetChamberState(5)
+	d("Stress:"..tostring(GetSettingChamberStress()).." State"
+		..":"..tostring(state1)..","..tostring(prog1)
+		..":"..tostring(state2)..","..tostring(prog2)
+		..":"..tostring(state3)..","..tostring(prog3)
+		..":"..tostring(state4)..","..tostring(prog4)
+		..":"..tostring(state5)..","..tostring(prog5))
 
-	--local chamberStress = GetSettingChamberStress()
-	--local chamberSolved = IsChamberSolved(1)
-	--d("chamberStress:"..tostring(chamberStress))
-	--d("chamberSolved:"..tostring(chamberSolved))
+	if IsIndOn(ptk.VM_BTN_LEFT) then
+		if GetSettingChamberStress() > 0 then
+			ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
+			ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT) -- start moving
+			zo_callLater(CheckLockPickStatus, 80)
+		elseif (prog1 > 0 or prog2 > 0 or prog3 > 0 or prog4 > 0 or prog5 > 0) then -- keep holding
+			zo_callLater(CheckLockPickStatus, 100)
+		end
+	elseif IsIndOn(ptk.VM_MOVE_10_RIGHT) then
+		ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT) -- stop moving
+		ptk.SetIndOn(ptk.VM_BTN_LEFT) -- start pressing
+		zo_callLater(CheckLockPickStatus, 100)
+	end
 end
+
 
 -- local item = PotMaker.Ingredient:new {name = zo_strformat(SI_TOOLTIP_ITEM_NAME, reagent), icon = TEXTURE_REAGENTUNKNOWN, traits = addTraits(newTraits), iconTraits = {}, pack = {}}
 
@@ -131,17 +152,17 @@ function AHKRapidFire:Initialize()
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
 	--AHKRapidFire.PTK = PixelsToKeys:new("010203", 0, 6) -- (cnstColor, cnstX, cnstY)
 	d("FindmeInitText") -- does not show. wait until player active
+	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_BEGIN_LOCKPICK, AHKRapidFire.BeginLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_FAILED, AHKRapidFire.EndLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
 -- occurs. We'll use this to initialize our addon after all of its resources are fully loaded.
 function AHKRapidFire.OnAddOnLoaded(event, addonName) -- The event fires each time *any* addon loads - but we only care about when our own addon loads.
     if addonName == AHKRapidFire.name then AHKRapidFire:Initialize() end
-	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_BEGIN_LOCKPICK, AHKRapidFire.BeginLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_FAILED, AHKRapidFire.EndLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
 end
 
 -- Finally, we'll register our event handler function to be called when the proper event occurs.
