@@ -7,6 +7,12 @@ local function Subrange(t, first, last)
 	for i=first,last do sub[#sub + 1] = t[i] end
 	return sub
 end
+local function GetOffsetIntColorValFromBools(o, bools)
+	return ((bools[o+8] * 1) + (bools[o+7] * 2) + (bools[o+6] * 3) + (bools[o+5] * 4) + (bools[o+4] * 5) + (bools[o+3] * 6) + (bools[o+2] * 7) + (bools[o+1] * 8)) / 255
+end
+local function GetColorValFromBoolVals(b1, b2, b3, b4, b5, b6, b7, b8)
+	return ((b8 * 1) + (b7 * 2) + (b6 * 3) + (b5 * 4) + (b4 * 5) + (b3 * 6) + (b2 * 7) + (b1 * 8)) / 255
+end
 local function GetIntFromBool(bools)
 	local sum = 0
 	for i=0,7 do sum = sum + bools[8-i] * math.pow(2, i) end
@@ -39,11 +45,10 @@ function lib.new(cnstColor, cnstX, cnstY)
 	for i=1,24*numDataPixels do bools[i] = 0 end
 	local dataPixels = {}
 	for i = 1, numDataPixels do
-		colorDataLineTmp = CreateControl(nil, colorDataWindow, CT_LINE)
-		colorDataLineTmp:SetAnchor(TOPLEFT, colorDataWindow, TOPLEFT, cnstX+i, cnstY)
-		colorDataLineTmp:SetAnchor(TOPRIGHT, colorDataWindow, TOPLEFT, cnstX+i+1, cnstY)
-		colorDataLineTmp:SetColor((0/255),(0/255),(0/255))
-		dataPixels[i] = colorDataLineTmp
+		dataPixels[i] = CreateControl(nil, colorDataWindow, CT_LINE)
+		dataPixels[i]:SetAnchor(TOPLEFT, colorDataWindow, TOPLEFT, cnstX+i, cnstY)
+		dataPixels[i]:SetAnchor(TOPRIGHT, colorDataWindow, TOPLEFT, cnstX+i+1, cnstY)
+		dataPixels[i]:SetColor((0/255),(0/255),(0/255))
 	end
 
 	local result = {
@@ -55,6 +60,15 @@ function lib.new(cnstColor, cnstX, cnstY)
 				bools[idx] = 1
 				for i = 1, numDataPixels do
 					dataPixels[i]:SetColor(GetRGBFromBoolRange(Subrange(bools,(i*24)-23,(i*24))))
+					--dataPixels[i]:SetColor(
+					--	GetOffsetIntColorValFromBools((i*8)-8, bools),
+					--	GetOffsetIntColorValFromBools((i*8)-0, bools),
+					--	GetOffsetIntColorValFromBools((i*8)+8, bools))
+					--dataPixels[1]:SetColor(
+					--	GetColorValFromBoolVals(bools[1], bools[2], bools[3], bools[4], bools[5], bools[6], bools[7], bools[8]),
+					--	GetColorValFromBoolVals(bools[9], bools[10], bools[11], bools[12], bools[13], bools[14], bools[15], bools[16]),
+					--	GetColorValFromBoolVals(bools[17], bools[18], bools[19], bools[20], bools[21], bools[22], bools[23], bools[24]))
+
 				end
 			else
 				d("no index:"..tostring(idx))
@@ -214,3 +228,37 @@ function lib:dispmsg(txt)
 end
 
 LibPixelControl = lib
+
+
+--------------
+-- Meta class
+Shape = {area = 0,
+		altarea = 55,
+		printarg = function(arg0) print("arg0 ",arg0, area, altarea) end,
+}
+
+-- Base class method new
+
+function Shape:new (o,side)
+   o = o or {}
+   setmetatable(o, self)
+   self.__index = self
+   side = side or 0
+   self.area = side*side;
+   return o
+end
+
+-- Base class method printArea
+
+function Shape:printArea (arg0)
+   print("The area is ",self.area)
+   print("arg0 ",arg0)
+   self.printarg(arg0)
+end
+
+-- Creating an object
+myshape = Shape:new(nil,10)
+myshape:printArea(50)
+-- The area is 	100
+-- arg0 	50
+-- arg0 	50	nil	nil
