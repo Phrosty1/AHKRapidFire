@@ -1,7 +1,5 @@
 -- For menu & data
 AHKRapidFire = {}
-AHKRapidFire.savedVars = {}
-AHKRapidFire.globalSavedVars = {}
 AHKRapidFire.name = "AHKRapidFire"
 
 local ms_time = GetGameTimeMilliseconds()
@@ -10,7 +8,8 @@ local function dmsg(txt)
 	ms_time = GetGameTimeMilliseconds()
 end
 
-local ptk = LibPixelControl.new("010203", 0, 7)
+local ptk = LibPixelControl
+local testval = 5
 
 function AHKRapidFire:PixelDemo()
 	--d("ptk.VK_A:"..tostring(ptk.VK_A))
@@ -46,13 +45,36 @@ function AHKRapidFire:PixelDemo()
 	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_LEFT) end, t)
 end
 
+local function LocOpenFire()
+	d("GetVal:"..tostring(ptk.GetVal()))
+	d("SetVal:"..tostring(ptk.SetVal(2)))
+	d("GetVal:"..tostring(ptk.GetVal()))
+	d("SetVal:"..tostring(ptk:SelfSetVal(3)))
+	d("GetVal:"..tostring(ptk:SelfGetVal()))
+	d("GetVal:"..tostring(LibPixelControl.GetVal()))
+
+	d("VK_BRACELEFT:"..tostring(LibPixelControl)) -- 
+	d("VK_BRACELEFT:"..tostring(ptk)) -- 
+	d("VK_BRACELEFT:"..tostring(LibPixelControl.VK_BRACELEFT)) -- 
+	d("VK_BRACELEFT:"..tostring(ptk.VK_BRACELEFT)) -- 
+end
+
 function AHKRapidFire:OpenFire()
 	d("OpenFire")
-	ptk.SetIndOn(ptk.VK_A)
+	--ptk.SetIndOn(ptk.VK_A)
+	--d("newlib.pxval:"..tostring(newlib.pxval))
+	--d("newlib.GetColorValFromBoolVals:"..tostring(newlib.GetColorValFromBoolVals(1,2,3,4,5,6,7,8))) -- nil
+	--d("newlib.GetColorValFromBoolVals:"..tostring(GetColorValFromBoolVals(1,2,3,4,5,6,7,8))) -- nil when declared with local, works otherwise
+	--d("GetConstValue:"..tostring(GetConstValue())) -- 
+	--d("GetSelfValue:"..tostring(GetSelfValue())) -- 
+
+	--d("VK_BRACELEFT:"..tostring(LibPixelControl.VK_BRACELEFT)) -- 
+	--d("VK_BRACELEFT:"..tostring(self.ptk.VK_BRACELEFT)) -- 
+	LocOpenFire()
 end
 function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
-	ptk.SetIndOff(ptk.VK_A)
+	--ptk.SetIndOff(ptk.VK_A)
 	AHKRapidFire:PixelDemo()
 end
 
