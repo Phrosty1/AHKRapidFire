@@ -98,38 +98,12 @@ end
 --		.." overflow:"..tostring(overflow))
 --end
 
---function AHKRapidFire:PressPickUntilDone()
---	ptk.SetIndOn(ptk.VM_BTN_LEFT)
---	EVENT_MANAGER:RegisterForUpdate("AHKRapidFireLockpicker", 100, CheckLockPickStatus)
---end
---function AHKRapidFire:MoveAndPickNext()
---	dmsg("MoveAndPickNext")
---	if IsChamberSolved(1) ~= true then
---		ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
---		zo_callLater(function()
---						ptk.SetIndOff(ptk.VM_MOVE_10_LEFT)
---						AHKRapidFire:PressPickUntilDone()
---					end, 80)
---	end
---end
---function AHKRapidFire:EndLockpicking()
---	d("EndLockpicking")
---	EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
---	ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
---end
---function AHKRapidFire:BeginLockpicking()
---	d("BeginLockpicking")
---	ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT)
---	zo_callLater(function()
---						ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT)
---						AHKRapidFire:PressPickUntilDone()
---					end, 500)
---end
+
 
 function AHKRapidFire:BeginLockpicking()
 	dmsg("BeginLockpicking")
 	ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
-	zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 300)
+	zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 500)
 end
 function AHKRapidFire:CheckLockPickStatus()
 	d("Stress:"..tostring(GetSettingChamberStress()).." Chambers:"..tostring(IsChamberSolved(1))..":"..tostring(IsChamberSolved(2))..":"..tostring(IsChamberSolved(3))..":"..tostring(IsChamberSolved(4))..":"..tostring(IsChamberSolved(5)))
@@ -144,21 +118,22 @@ function AHKRapidFire:CheckLockPickStatus()
 		..":"..tostring(state3)..","..tostring(prog3)
 		..":"..tostring(state4)..","..tostring(prog4)
 		..":"..tostring(state5)..","..tostring(prog5))
+	local repeatrate = 75
 	if ptk.IsIndOn(ptk.VM_MOVE_10_LEFT) then
 		ptk.SetIndOff(ptk.VM_MOVE_10_LEFT) -- stop moving
 		ptk.SetIndOn(ptk.VM_BTN_LEFT) -- start pressing
 		ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT) -- start moving
-		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 100)
+		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
 	elseif ptk.IsIndOn(ptk.VM_BTN_LEFT) then
 		if GetSettingChamberStress() > 0 then
 			ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
-			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 100)
+			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
 		elseif (prog1 > 0 or prog2 > 0 or prog3 > 0 or prog4 > 0 or prog5 > 0) then -- keep holding
-			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 100)
+			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
 		end
 	elseif ptk.IsIndOn(ptk.VM_MOVE_10_RIGHT) then
 		ptk.SetIndOn(ptk.VM_BTN_LEFT) -- start pressing
-		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 100)
+		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
 	end
 end
 function AHKRapidFire:EndLockpicking()
@@ -170,7 +145,22 @@ function AHKRapidFire:EndLockpicking()
 end
 
 
--- local item = PotMaker.Ingredient:new {name = zo_strformat(SI_TOOLTIP_ITEM_NAME, reagent), icon = TEXTURE_REAGENTUNKNOWN, traits = addTraits(newTraits), iconTraits = {}, pack = {}}
+-- EVENT_INVENTORY_SINGLE_SLOT_UPDATE (number eventCode, Bag bagId, number slotId, boolean isNewItem, ItemUISoundCategory itemSoundCategory, number inventoryUpdateReason, number stackCountChange)
+function AHKRapidFire:OnInventorySingleSlotUpdate(eventCode, bagId, slotId, isNewItem, itemSoundCategory, inventoryUpdateReason, stackCountChange)
+	if (GetItemType(bagId,slotId) == ITEMTYPE_LURE 
+		and isNewItem == false 
+		and stackCountChange == -1 
+		and itemSoundCategory == 39) 
+	then
+		--SetPixelKey(KEY_E)
+		--zo_callLater(function() SetPixelKey(KEY_E) end, 500)
+		ptk.SetIndOnFor(ptk.VK_E, 100)
+		zo_callLater(function() ptk.SetIndOnFor(ptk.VK_E, 100) end, 500)
+	end
+	--if (IsItemFish(bagId,slotId)) then
+	--	useItem(bagId,slotId)
+	--end
+end
 
 function AHKRapidFire:Initialize()
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
@@ -181,6 +171,8 @@ function AHKRapidFire:Initialize()
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_FAILED, AHKRapidFire.EndLockpicking)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
+
+	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, AHKRapidFire.OnInventorySingleSlotUpdate)
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event

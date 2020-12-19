@@ -128,7 +128,8 @@ LibPixelControl = LibPixelControl or {
 -- local constants
 local cnstX = 0
 local cnstY = 7
-local cnstColor = "010233"
+local cnstColor = "010203"
+local cnstEndColor = "030201"
 local numDataPixels = 6
 -- local functions
 local function Subrange(t, first, last)
@@ -176,6 +177,10 @@ for i = 1, numDataPixels do
 	dataPixels[i]:SetAnchor(TOPRIGHT, colorDataWindow, TOPLEFT, cnstX+i+1, cnstY)
 	dataPixels[i]:SetColor((0/255),(0/255),(0/255))
 end
+local colorDataLineEndCnst = CreateControl(nil, colorDataWindow, CT_LINE)
+colorDataLineEndCnst:SetAnchor(TOPLEFT, colorDataWindow, TOPLEFT, cnstX+numDataPixels+1, cnstY)
+colorDataLineEndCnst:SetAnchor(TOPRIGHT, colorDataWindow, TOPLEFT, cnstX+numDataPixels+2, cnstY)
+colorDataLineEndCnst:SetColor(GetColorFromHex(cnstEndColor))
 
 -- public functions
 function LibPixelControl.SetIndOn(idx)
@@ -201,6 +206,16 @@ function LibPixelControl.SetIndOff(idx)
 		bools[idx] = 0
 		for i = 1, numDataPixels do
 			dataPixels[i]:SetColor(GetRGBFromBoolRange(Subrange(bools,(i*24)-23,(i*24))))
+		end
+	else
+		d("no index:"..tostring(idx))
+	end
+end
+function LibPixelControl.SetIndOnFor(idx, duration)
+	if idx then
+		SetIndOn(idx)
+		if duration then
+			zo_callLater(function() SetIndOff(idx) end, duration)
 		end
 	else
 		d("no index:"..tostring(idx))
