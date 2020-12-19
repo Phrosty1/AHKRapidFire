@@ -128,7 +128,7 @@ LibPixelControl = LibPixelControl or {
 -- local constants
 local cnstX = 0
 local cnstY = 7
-local cnstColor = "010203"
+local cnstColor = "010233"
 local numDataPixels = 6
 -- local functions
 local function Subrange(t, first, last)
