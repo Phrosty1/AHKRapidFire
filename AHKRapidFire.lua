@@ -44,17 +44,12 @@ function AHKRapidFire:PixelDemo()
 end
 
 local function LocOpenFire()
-	d("GetVal:"..tostring(ptk.GetVal()))
-	d("SetVal:"..tostring(ptk.SetVal(2)))
-	d("GetVal:"..tostring(ptk.GetVal()))
-	d("SetVal:"..tostring(ptk:SelfSetVal(3)))
-	d("GetVal:"..tostring(ptk:SelfGetVal()))
-	d("GetVal:"..tostring(LibPixelControl.GetVal()))
+	local ms_time1 = GetGameTimeMilliseconds()
+	ptk.SetIndOn(ptk.VM_BTN_LEFT)
+	local ms_time2 = GetGameTimeMilliseconds()
+	d("Pixel refresh took " .. (ms_time2 - ms_time1) .. " ms")
+	ptk.SetIndOff(ptk.VM_BTN_LEFT)
 
-	d("VK_BRACELEFT:"..tostring(LibPixelControl)) -- 
-	d("VK_BRACELEFT:"..tostring(ptk)) -- 
-	d("VK_BRACELEFT:"..tostring(LibPixelControl.VK_BRACELEFT)) -- 
-	d("VK_BRACELEFT:"..tostring(ptk.VK_BRACELEFT)) -- 
 end
 
 function AHKRapidFire:OpenFire()
@@ -74,7 +69,7 @@ function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
 	--ptk.SetIndOff(ptk.VK_A)
 	--AHKRapidFire:PixelDemo()
-	ptk.SetIndOnFor(ptk.VK_E, 100)
+	--ptk.SetIndOnFor(ptk.VK_E, 100)
 end
 
 ---- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
