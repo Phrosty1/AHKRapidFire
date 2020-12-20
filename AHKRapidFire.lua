@@ -2,14 +2,12 @@
 AHKRapidFire = {}
 AHKRapidFire.name = "AHKRapidFire"
 
+local ptk = LibPixelControl
 local ms_time = GetGameTimeMilliseconds()
 local function dmsg(txt)
 	d((GetGameTimeMilliseconds() - ms_time) .. ") " .. txt)
 	ms_time = GetGameTimeMilliseconds()
 end
-
-local ptk = LibPixelControl
-local testval = 5
 
 function AHKRapidFire:PixelDemo()
 	--d("ptk.VK_A:"..tostring(ptk.VK_A))
@@ -99,77 +97,10 @@ end
 --		.." overflow:"..tostring(overflow))
 --end
 
-
-
-function AHKRapidFire:BeginLockpicking()
-	dmsg("BeginLockpicking")
-	ptk.SetIndOn(ptk.VM_MOVE_10_LEFT)
-	zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, 500)
-end
-function AHKRapidFire:CheckLockPickStatus()
-	d("Stress:"..tostring(GetSettingChamberStress()).." Chambers:"..tostring(IsChamberSolved(1))..":"..tostring(IsChamberSolved(2))..":"..tostring(IsChamberSolved(3))..":"..tostring(IsChamberSolved(4))..":"..tostring(IsChamberSolved(5)))
-	state1, prog1 = GetChamberState(1)
-	state2, prog2 = GetChamberState(2)
-	state3, prog3 = GetChamberState(3)
-	state4, prog4 = GetChamberState(4)
-	state5, prog5 = GetChamberState(5)
-	d("Stress:"..tostring(GetSettingChamberStress()).." State"
-		..":"..tostring(state1)..","..tostring(prog1)
-		..":"..tostring(state2)..","..tostring(prog2)
-		..":"..tostring(state3)..","..tostring(prog3)
-		..":"..tostring(state4)..","..tostring(prog4)
-		..":"..tostring(state5)..","..tostring(prog5))
-	local repeatrate = 75
-	if ptk.IsIndOn(ptk.VM_MOVE_10_LEFT) then
-		ptk.SetIndOff(ptk.VM_MOVE_10_LEFT) -- stop moving
-		ptk.SetIndOn(ptk.VM_BTN_LEFT) -- start pressing
-		ptk.SetIndOn(ptk.VM_MOVE_10_RIGHT) -- start moving
-		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
-	elseif ptk.IsIndOn(ptk.VM_BTN_LEFT) then
-		if GetSettingChamberStress() > 0 then
-			ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
-			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
-		elseif (prog1 > 0 or prog2 > 0 or prog3 > 0 or prog4 > 0 or prog5 > 0) then -- keep holding
-			zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
-		end
-	elseif ptk.IsIndOn(ptk.VM_MOVE_10_RIGHT) then
-		ptk.SetIndOn(ptk.VM_BTN_LEFT) -- start pressing
-		zo_callLater(function() AHKRapidFire:CheckLockPickStatus() end, repeatrate)
-	end
-end
-function AHKRapidFire:EndLockpicking()
-	dmsg("EndLockpicking")
-	--EVENT_MANAGER:UnregisterForUpdate("AHKRapidFireLockpicker")
-	ptk.SetIndOff(ptk.VM_MOVE_10_LEFT) -- stop pressing
-	ptk.SetIndOff(ptk.VM_MOVE_10_RIGHT) -- stop pressing
-	ptk.SetIndOff(ptk.VM_BTN_LEFT) -- stop pressing
-end
-
-
--- EVENT_INVENTORY_SINGLE_SLOT_UPDATE (number eventCode, Bag bagId, number slotId, boolean isNewItem, ItemUISoundCategory itemSoundCategory, number inventoryUpdateReason, number stackCountChange)
-function AHKRapidFire.OnInventorySingleSlotUpdate(eventCode, bagId, slotId, isNewItem, itemSoundCategory, inventoryUpdateReason, stackCountChange)
-	if (GetItemType(bagId,slotId) == ITEMTYPE_LURE 
-		and isNewItem == false 
-		and stackCountChange == -1 
-		and itemSoundCategory == 39) 
-	then
-		dmsg("Lure used, pressing E")
-		ptk.SetIndOnFor(ptk.VK_E, 100)
-		zo_callLater(function() ptk.SetIndOnFor(ptk.VK_E, 100) end, 500)
-	end
-end
-
 function AHKRapidFire:Initialize()
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
-	--AHKRapidFire.PTK = PixelsToKeys:new("010203", 0, 6) -- (cnstColor, cnstX, cnstY)
-	d("FindmeInitText") -- does not show. wait until player active
+	--d("FindmeInitText") -- would not show. wait until player active
 	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_BEGIN_LOCKPICK, AHKRapidFire.BeginLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_FAILED, AHKRapidFire.EndLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
-
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, AHKRapidFire.OnInventorySingleSlotUpdate)
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
