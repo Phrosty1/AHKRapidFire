@@ -154,14 +154,9 @@ function AHKRapidFire.OnInventorySingleSlotUpdate(eventCode, bagId, slotId, isNe
 		and itemSoundCategory == 39) 
 	then
 		dmsg("Lure used, pressing E")
-		--SetPixelKey(KEY_E)
-		--zo_callLater(function() SetPixelKey(KEY_E) end, 500)
 		ptk.SetIndOnFor(ptk.VK_E, 100)
 		zo_callLater(function() ptk.SetIndOnFor(ptk.VK_E, 100) end, 500)
 	end
-	--if (IsItemFish(bagId,slotId)) then
-	--	useItem(bagId,slotId)
-	--end
 end
 
 function AHKRapidFire:Initialize()
