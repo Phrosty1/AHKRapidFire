@@ -75,7 +75,8 @@ end
 function AHKRapidFire:CeaseFire()
 	d("CeaseFire")
 	--ptk.SetIndOff(ptk.VK_A)
-	AHKRapidFire:PixelDemo()
+	--AHKRapidFire:PixelDemo()
+	ptk.SetIndOnFor(ptk.VK_E, 100)
 end
 
 ---- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
@@ -146,12 +147,13 @@ end
 
 
 -- EVENT_INVENTORY_SINGLE_SLOT_UPDATE (number eventCode, Bag bagId, number slotId, boolean isNewItem, ItemUISoundCategory itemSoundCategory, number inventoryUpdateReason, number stackCountChange)
-function AHKRapidFire:OnInventorySingleSlotUpdate(eventCode, bagId, slotId, isNewItem, itemSoundCategory, inventoryUpdateReason, stackCountChange)
+function AHKRapidFire.OnInventorySingleSlotUpdate(eventCode, bagId, slotId, isNewItem, itemSoundCategory, inventoryUpdateReason, stackCountChange)
 	if (GetItemType(bagId,slotId) == ITEMTYPE_LURE 
 		and isNewItem == false 
 		and stackCountChange == -1 
 		and itemSoundCategory == 39) 
 	then
+		dmsg("Lure used, pressing E")
 		--SetPixelKey(KEY_E)
 		--zo_callLater(function() SetPixelKey(KEY_E) end, 500)
 		ptk.SetIndOnFor(ptk.VK_E, 100)
@@ -172,7 +174,7 @@ function AHKRapidFire:Initialize()
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_SUCCESS, AHKRapidFire.EndLockpicking)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_LOCKPICK_BROKE, AHKRapidFire.EndLockpicking)
 
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, AHKRapidFire.OnInventorySingleSlotUpdate)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_INVENTORY_SINGLE_SLOT_UPDATE, AHKRapidFire.OnInventorySingleSlotUpdate)
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event

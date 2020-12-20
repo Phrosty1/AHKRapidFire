@@ -212,10 +212,11 @@ function LibPixelControl.SetIndOff(idx)
 	end
 end
 function LibPixelControl.SetIndOnFor(idx, duration)
+	--d("SetIndOnFor idx:"..tostring(idx).." duration:"..tostring(duration))
 	if idx then
-		SetIndOn(idx)
+		LibPixelControl.SetIndOn(idx)
 		if duration then
-			zo_callLater(function() SetIndOff(idx) end, duration)
+			zo_callLater(function() LibPixelControl.SetIndOff(idx) end, duration)
 		end
 	else
 		d("no index:"..tostring(idx))
