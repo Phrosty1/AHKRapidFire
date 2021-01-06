@@ -46,9 +46,9 @@ end
 local keepfiring = false
 local cntUsed = 0
 local cntCooldowns = 0
-local repeatkey = ptk.VK_4
+local repeatkey = ptk.VK_1
 local function checkFire()
-	if keepfiring and cntUsed >= 1 and cntCooldowns >= 2 then
+	if keepfiring then -- and cntUsed >= 1 and cntCooldowns >= 2 then
 		dmsg("Pressing "..repeatkey) ptk.SetIndOnFor(repeatkey, 50)
 	end
 end
@@ -132,6 +132,26 @@ end
 -- EVENT_ACTION_UPDATE_COOLDOWNS (number eventCode)
 function AHKRapidFire.OnActionUpdateCooldowns(eventCode)
 	dmsg("OnActionUpdateCooldowns: "..tostring(eventCode))
+
+	-- 1 Light Attack
+	-- 2 Heavy Attack
+	-- 9 is last action slot
+	-- 16 is last quick slot
+	for i=1,9 do
+		local remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+		local abilityCost, mechanicType = GetSlotAbilityCost(i) -- Returns: number abilityCost, number mechanicType
+
+		d("("..tostring(i)..")"
+			.." rem:"..tostring(remain)
+			.." dur:"..tostring(duration)
+			.." gbl:"..tostring(global)
+			.." typ:"..tostring(globalSlotType)
+			.." cost:"..tostring(abilityCost)
+			.." mtyp:"..tostring(mechanicType)
+			.." name:"..tostring(GetSlotName(i))
+			)
+	end
+
 	cntCooldowns=cntCooldowns+1
 	checkFire()
 end
@@ -140,6 +160,8 @@ end
 function AHKRapidFire.OnSlotAbilityUsed(eventCode, actionSlotIndex)
 	dmsg("OnSlotAbilityUsed: "..tostring(eventCode)
 		.." actionSlotIndex:"..tostring(actionSlotIndex))
+
+
 	cntUsed=cntUsed+1
 	checkFire()
 end
@@ -164,9 +186,9 @@ function AHKRapidFire:Initialize()
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT, AHKRapidFire.OnCombatEvent)
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_EFFECT_CHANGED, AHKRapidFire.OnEffectChanged)
 
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS, AHKRapidFire.OnActionUpdateCooldowns)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS, AHKRapidFire.OnActionUpdateCooldowns)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED, AHKRapidFire.OnSlotAbilityUsed)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_STATE_UPDATED, AHKRapidFire.OnSlotStateUpdated)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_STATE_UPDATED, AHKRapidFire.OnSlotStateUpdated)
 
 
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_GAME_CAMERA_UI_MODE_CHANGED, OnEventUiModeChanged)
