@@ -107,9 +107,10 @@ function AHKRapidFire.GetTopAction()
 end
 
 function AHKRapidFire.GetSlotCSVInfo()
-	local str = ""
-	for i=1,16 do
-		local remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+	local remain, duration, global, globalSlotType = GetSlotCooldownInfo(1) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+	local str = tostring(remain)
+	for i=2,16 do
+		remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
 		str = str..", "..tostring(remain)
 	end
 	return str
@@ -181,7 +182,10 @@ function AHKRapidFire:OpenFire()
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED, AHKRapidFire.OnWeaponPairLockChanged) -- EVENT_WEAPON_PAIR_LOCK_CHANGED (number eventCode, boolean locked)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_UPDATED, AHKRapidFire.OnActionSlotUpdated) -- EVENT_ACTION_SLOT_UPDATED (number eventCode, number actionSlotIndex)
 	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 30) end, 0)
+	--dmsg("Press 1") ptk.SetIndOnFor(ptk.VK_1, 30)
+	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 30) end, 400)
 	dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 30)
+	zo_callLater(function() dmsg("Press 1") ptk.SetIndOnFor(ptk.VK_1, 30) end, 400)
 end
 function AHKRapidFire:CeaseFire()
 	keepfiring = false
