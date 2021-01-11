@@ -8,8 +8,80 @@ local function dmsg(txt)
 	d((GetGameTimeMilliseconds() - ms_time) .. ") " .. txt)
 	ms_time = GetGameTimeMilliseconds()
 end
-local keepfiring = false
 
+function AHKRapidFire:PixelDemo()
+	--d("ptk.VK_A:"..tostring(ptk.VK_A))
+	t=1000
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_A) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_A) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_D) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_D) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_W) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_W) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VK_S) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VK_S) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_LEFT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_LEFT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_RIGHT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_RIGHT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_UP) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_UP) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_MOVE_DOWN) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_MOVE_DOWN) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_RIGHT) end, t) t=t+500
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_RIGHT) end, t)
+	t=t+500
+	zo_callLater(function() ptk.SetIndOn(ptk.VM_BTN_LEFT) end, t) t=t+50
+	zo_callLater(function() ptk.SetIndOff(ptk.VM_BTN_LEFT) end, t)
+end
+
+local keepfiring = false
+local cntUsed = 0
+local cntCooldowns = 0
+local repeatkey = ptk.VK_1
+local function checkFire()
+	if keepfiring then -- and cntUsed >= 1 and cntCooldowns >= 2 then
+		dmsg("Pressing "..repeatkey) ptk.SetIndOnFor(repeatkey, 50)
+	end
+end
+
+function AHKRapidFire:OpenFire()
+	dmsg("OpenFire ------------------------------")
+	keepfiring = true
+	cntUsed = 0
+	cntCooldowns = 0
+	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 50) end, 0)
+	--zo_callLater(function() dmsg("Pressing 1") ptk.SetIndOnFor(ptk.VK_1, 50) end, 50)
+	---- needs 500 before can press 2
+	--t=0
+	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 50) end, t)
+	--t=t+200
+	--zo_callLater(function() dmsg("Pressing `") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 50) end, t)
+	--t=t+200
+	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 50) end, t)
+	--t=t+200
+	--zo_callLater(function() dmsg("Pressing `") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 50) end, t)
+	--t=t+200
+	--zo_callLater(function() dmsg("Pressing 2") ptk.SetIndOnFor(ptk.VK_2, 50) end, t)
+	----zo_callLater(function() dmsg("Pressing 1") ptk.SetIndOnFor(ptk.VK_1, 50) end, 200)
+	dmsg("Pressing "..repeatkey) ptk.SetIndOnFor(repeatkey, 50)
+	--zo_callLater(function() dmsg("Pressing `") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 50) end, 100)
+end
+function AHKRapidFire:CeaseFire()
+	keepfiring = false
+	d("CeaseFire ------------------------------")
+	--ptk.SetIndOff(ptk.VK_A)
+	--AHKRapidFire:PixelDemo()
+	--ptk.SetIndOnFor(ptk.VK_E, 50)
+end
 
 -- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
 function AHKRapidFire.OnCombatEvent(eventCode, result, isError, abilityName, abilityGraphic, abilityActionSlotType, sourceName, sourceType, targetName, targetType, hitValue, powerType, damageType, log, sourceUnitId, targetUnitId, abilityId, overflow)
@@ -106,55 +178,71 @@ function AHKRapidFire.GetTopAction()
 	return tSortActions[1]
 end
 
-function AHKRapidFire.GetSlotCSVInfo()
-	local str = ""
-	for i=1,16 do
-		local remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
-		str = str..", "..tostring(remain)
-	end
-	return str
-end
 function AHKRapidFire.OnSlotAbilityUsed(eventCode, actionSlotIndex) -- EVENT_ACTION_SLOT_ABILITY_USED (number eventCode, number actionSlotIndex)
 	dmsg("OnSlotAbilityUsed: "..tostring(eventCode)
 		.." actionSlotIndex:"..tostring(actionSlotIndex))
-	d(AHKRapidFire.GetSlotCSVInfo())
+	cntUsed=cntUsed+1
+	checkFire()
 end
+
 function AHKRapidFire.OnActionUpdateCooldowns(eventCode) -- EVENT_ACTION_UPDATE_COOLDOWNS (number eventCode)
 	dmsg("OnActionUpdateCooldowns: "..tostring(eventCode))
-	d(AHKRapidFire.GetSlotCSVInfo())
+	-- 16 is last quick slot
+	--for i=1,9 do
+	--	local remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+	--	local abilityCost, mechanicType = GetSlotAbilityCost(i) -- Returns: number abilityCost, number mechanicType
+	--	d("("..tostring(i)..")"
+	--		.." rem:"..tostring(remain)
+	--		.." dur:"..tostring(duration)
+	--		.." gbl:"..tostring(global)
+	--		.." typ:"..tostring(globalSlotType)
+	--		.." cost:"..tostring(abilityCost)
+	--		.." mtyp:"..tostring(mechanicType)
+	--		.." name:"..tostring(GetSlotName(i))
+	--		)
+	--end
 end
+
+
 function AHKRapidFire.OnSlotStateUpdated(eventCode, actionSlotIndex) -- EVENT_ACTION_SLOT_STATE_UPDATED (number eventCode, number actionSlotIndex)
-	--if actionSlotIndex == 1 or actionSlotIndex == 4 then
+	if actionSlotIndex == 1 or actionSlotIndex == 4 then
 		remain, duration, global, globalSlotType = GetSlotCooldownInfo(actionSlotIndex)
-		dmsg("UpdState"--"OnSlotStateUpdated: "..tostring(eventCode)
+		dmsg("OnSlotStateUpdated: "..tostring(eventCode)
 			.." idx:"..tostring(actionSlotIndex)
-			.." rem:"..tostring(remain)
-			.." dur:"..tostring(duration)
-			.." gbl:"..tostring(global)
-			.." typ:"..tostring(globalSlotType)
+			--.." rem:"..tostring(remain)
+			--.." dur:"..tostring(duration)
+			--.." gbl:"..tostring(global)
+			--.." typ:"..tostring(globalSlotType)
 			.." lock:"..tostring(IsSlotLocked(actionSlotIndex))
 			.." name:"..tostring(GetSlotName(actionSlotIndex))
 			)
-	--end
+	end
 end
 function AHKRapidFire.OnWeaponPairLockChanged(eventCode, locked) -- EVENT_WEAPON_PAIR_LOCK_CHANGED (number eventCode, boolean locked)
 	dmsg("OnWeaponPairLockChanged: "..tostring(eventCode)
 		.." locked:"..tostring(locked))
-	d(AHKRapidFire.GetSlotCSVInfo())
 end
 function AHKRapidFire.OnActionSlotUpdated(eventCode, actionSlotIndex) -- EVENT_ACTION_SLOT_UPDATED (number eventCode, number actionSlotIndex)
-	--if actionSlotIndex == 1 or actionSlotIndex == 4 then
+	if actionSlotIndex == 1 or actionSlotIndex == 4 then
 		dmsg("OnActionSlotUpdated: "..tostring(eventCode)
 			.." idx:"..tostring(actionSlotIndex)
 			.." name:"..tostring(GetSlotName(actionSlotIndex))
 			)
-	--end
+	end
 end
 function AHKRapidFire:Initialize()
 	--UseItem(number Bag bagId, number slotIndex)
 	--SLASH_COMMANDS["/pd"] = AHKRapidFire.PTK.PixelDemo
 	--d("FindmeInitText") -- would not show. wait until player active
 	ZO_CreateStringId("SI_BINDING_NAME_RF_FIRING", "Rapid Firing")
+
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED, AHKRapidFire.OnSlotAbilityUsed)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS, AHKRapidFire.OnActionUpdateCooldowns)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_STATE_UPDATED, AHKRapidFire.OnSlotStateUpdated)
+	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT, AHKRapidFire.OnCombatEvent)
+	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_EFFECT_CHANGED, AHKRapidFire.OnEffectChanged)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED, AHKRapidFire.OnWeaponPairLockChanged) -- EVENT_WEAPON_PAIR_LOCK_CHANGED (number eventCode, boolean locked)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_UPDATED, AHKRapidFire.OnActionSlotUpdated) -- EVENT_ACTION_SLOT_UPDATED (number eventCode, number actionSlotIndex)
 
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_GAME_CAMERA_UI_MODE_CHANGED, OnEventUiModeChanged)
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_PLAYER_COMBAT_STATE, OnEventCombatStateChanged)
@@ -168,31 +256,7 @@ function AHKRapidFire:Initialize()
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT, OnEventCombatEvent)
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_RETICLE_TARGET_CHANGED, OnEventReticleChanged)
 
-EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED)
-end
-function AHKRapidFire:OpenFire()
-	keepfiring = true
-	dmsg("OpenFire ------------------------------")
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED, AHKRapidFire.OnSlotAbilityUsed) -- EVENT_ACTION_SLOT_ABILITY_USED (number eventCode, number actionSlotIndex)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS, AHKRapidFire.OnActionUpdateCooldowns) -- EVENT_ACTION_UPDATE_COOLDOWNS (number eventCode)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_STATE_UPDATED, AHKRapidFire.OnSlotStateUpdated) -- EVENT_ACTION_SLOT_STATE_UPDATED (number eventCode, number actionSlotIndex)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT, AHKRapidFire.OnCombatEvent) -- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_EFFECT_CHANGED, AHKRapidFire.OnEffectChanged) -- EVENT_EFFECT_CHANGED (number eventCode, MsgEffectResult changeType, number effectSlot, string effectName, string unitTag, number beginTime, number endTime, number stackCount, string iconName, string buffType, BuffEffectType effectType, AbilityType abilityType, StatusEffectType statusEffectType, string unitName, number unitId, number abilityId, CombatUnitType sourceType)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED, AHKRapidFire.OnWeaponPairLockChanged) -- EVENT_WEAPON_PAIR_LOCK_CHANGED (number eventCode, boolean locked)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_UPDATED, AHKRapidFire.OnActionSlotUpdated) -- EVENT_ACTION_SLOT_UPDATED (number eventCode, number actionSlotIndex)
-	--zo_callLater(function() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 30) end, 0)
-	dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 30)
-end
-function AHKRapidFire:CeaseFire()
-	keepfiring = false
-	d("CeaseFire ------------------------------")
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_STATE_UPDATED)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_EFFECT_CHANGED)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED)
-	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_UPDATED)
+--EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED)
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
