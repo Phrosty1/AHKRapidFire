@@ -30,9 +30,15 @@ local function LogValues(eventName, args)
 	AHKRapidFire.savedVars.logIdx = AHKRapidFire.savedVars.logIdx + 1
 end
 local keepfiring = false
-local function LClick() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 20) end
-local function Press1() dmsg("Press 1") ptk.SetIndOnFor(ptk.VK_1, 20) end
-local function BarSwap() dmsg("Press backquote") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 20) end
+local function LClick() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 20)
+	LogValues("Mouse Click", {AHKRapidFire.GetSlotCooldownCSV()})
+end
+local function Press1() dmsg("Press 1") ptk.SetIndOnFor(ptk.VK_1, 20)
+	LogValues("Press 1", {AHKRapidFire.GetSlotCooldownCSV()})
+end
+local function BarSwap() dmsg("Press backquote") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 20)
+	LogValues("Press backquote", {AHKRapidFire.GetSlotCooldownCSV()})
+end
 
 
 -- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
@@ -148,7 +154,7 @@ function strInfo(idx)
 	end
 	return tostring(obj)
 end
-function AHKRapidFire.GetSlotCSVInfo()
+function AHKRapidFire.GetSlotCooldownCSV()
 	local remain, duration, global, globalSlotType = GetSlotCooldownInfo(1) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
 	local str = tostring(remain)
 	for i=2,16 do
@@ -167,8 +173,7 @@ end
 
 local msLightUsed = 0
 local isLightReady = true
-function AHKRapidFire:OpenFire()
-	keepfiring = true
+function AHKRapidFire:OpenFireFnc()
 	if false then
 		BarSwap()
 		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED, function(_, isLocked)
@@ -216,18 +221,34 @@ function AHKRapidFire:OpenFire()
 	if true then
 		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED, function(_, slotIdx)
 				dmsg("EVENT_ACTION_SLOT_ABILITY_USED "..tostring(slotIdx))
+				--LogValues("OnActionSlotAbilityUsed", {AHKRapidFire.GetSlotCooldownCSV()})
 			end)
 		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_UPDATE_COOLDOWNS, function()
-				dmsg("EVENT_ACTION_UPDATE_COOLDOWNS "..AHKRapidFire.GetSlotCSVInfo())
+				dmsg("EVENT_ACTION_UPDATE_COOLDOWNS "..AHKRapidFire.GetSlotCooldownCSV())
+				LogValues("OnActionUpdateCooldowns", {AHKRapidFire.GetSlotCooldownCSV()})
 			end)
 
-		--1000 works
-		EVENT_MANAGER:RegisterForUpdate("presslots", 900, function()
-				zo_callLater(LClick, 0)
-				zo_callLater(Press1, 50)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."BarLight", EVENT_WEAPON_PAIR_LOCK_CHANGED, function(_, isLocked)
+				if isLocked then
+					EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."BarLight", EVENT_ACTION_UPDATE_COOLDOWNS, function()
+							EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name.."BarLight", EVENT_ACTION_UPDATE_COOLDOWNS)
+							local remain, _, _, _ = GetSlotCooldownInfo(1) -- remain = 250
+							zo_callLater(LClick, remain-200) -- works well
+						end)
+				end
 			end)
-		zo_callLater(LClick, 0)
-		zo_callLater(Press1, 50)
+
+
+		local t=0
+		zo_callLater(BarSwap, t)
+
+		for i=1,10 do
+			t=t+2000
+			zo_callLater(BarSwap, t)
+		end
+
+		t=t+2000
+		zo_callLater(AHKRapidFire.CeaseFireFnc, t)
 	end
 
 
@@ -239,7 +260,7 @@ function AHKRapidFire:OpenFire()
 	--	end)
 
 end
-function AHKRapidFire:CeaseFire()
+function AHKRapidFire.CeaseFireFnc()
 	keepfiring = false
 	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_WEAPON_PAIR_LOCK_CHANGED)
 	EVENT_MANAGER:UnregisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED)
@@ -247,6 +268,18 @@ function AHKRapidFire:CeaseFire()
 	EVENT_MANAGER:UnregisterForUpdate("presslots")
 	d("CeaseFire ------------------------------")
 end
+function AHKRapidFire:OpenFire()
+	if not keepfiring then
+		keepfiring = true
+		AHKRapidFire:OpenFireFnc()
+	else
+		keepfiring = false
+		AHKRapidFire.CeaseFireFnc()
+	end
+end
+function AHKRapidFire:CeaseFire() end
+
+
 function AHKRapidFire:OpenFireOld()
 	AHKRapidFire.PopulateActions()
 	keepfiring = true
@@ -338,7 +371,7 @@ end
 function AHKRapidFire.OnWeaponPairLockChanged(eventCode, locked) -- EVENT_WEAPON_PAIR_LOCK_CHANGED (number eventCode, boolean locked)
 	dmsg("OnWeaponPairLockChanged: "..tostring(eventCode)
 		.." locked:"..tostring(locked))
-	d(AHKRapidFire.GetSlotCSVInfo())
+	d(AHKRapidFire.GetSlotCooldownCSV())
 end
 function AHKRapidFire.OnActionSlotUpdated(eventCode, actionSlotIndex) -- EVENT_ACTION_SLOT_UPDATED (number eventCode, number actionSlotIndex)
 	--if actionSlotIndex == 1 or actionSlotIndex == 4 then
@@ -374,7 +407,7 @@ function AHKRapidFire:Initialize()
 
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_ABILITY_USED, function(...) LogValues("EVENT_ACTION_SLOT_ABILITY_USED", {...}) end)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_UPDATE_COOLDOWNS, function(...) LogValues("EVENT_ACTION_UPDATE_COOLDOWNS", {...}) end)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_STATE_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_STATE_UPDATED", {...}) end)
+	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_STATE_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_STATE_UPDATED", {...}) end)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_EFFECT_CHANGED, function(...) LogValues("EVENT_EFFECT_CHANGED", {...}) end)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_WEAPON_PAIR_LOCK_CHANGED, function(...) LogValues("EVENT_WEAPON_PAIR_LOCK_CHANGED", {...}) end)
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_UPDATED", {...}) end)
