@@ -1,0 +1,47 @@
+EVENT_ACTION_SLOT_ABILITY_USED
+	When a slot action is put in the queue
+EVENT_ACTION_UPDATE_COOLDOWNS
+	When the queued slot action is actually started
+EVENT_WEAPON_PAIR_LOCK_CHANGED(true)
+	When the bar swap action is queued
+
+Light Attack
+Queued: EVENT_ACTION_SLOT_ABILITY_USED(1)
+Started: EVENT_ACTION_UPDATE_COOLDOWNS(600, 700, _)
+
+Instant
+Queued: EVENT_ACTION_SLOT_ABILITY_USED(3)
+Started: EVENT_ACTION_UPDATE_COOLDOWNS(988, 988, 988)
+
+Bar Swap
+Queued: EVENT_WEAPON_PAIR_LOCK_CHANGED(true)
+Started: EVENT_ACTION_UPDATE_COOLDOWNS(250, 250, _)
+
+Food or Drink
+Queued: 
+Started: EVENT_ACTION_UPDATE_COOLDOWNS(_, _, _, _, _, _, _, _, 5000, _, _, _, _, _, 6000, 6000)
+
+XXXX => XXXX
+Accepts this into queue after: (When can we press a key)
+Acts on queue after: (When will the key press result in the next action)
+
+Light Attack => Light Attack
+Accepts this into queue after: 613
+Acts on queue after: 695
+
+Instant => Light Attack
+Accepts this into queue after: 366
+Acts on queue after: 440
+
+Instant => Instant
+Accepts this into queue after: 433
+Acts on queue after: 946
+
+Light Attack => Bar Swap
+Accepts this into queue after: <60
+Acts on queue after: 217
+
+Instant => Bar Swap
+Accepts this into queue after: <60
+Acts on queue after: 205
+

@@ -1,227 +1,227 @@
 1	14324	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-2	14393	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+2	14393	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 3	14393	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 4	123	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2241.6770019531	2261.6770019531	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-5	998	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+5	998	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 6	1932	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-7	2003	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+7	2003	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 8	2003	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 9	151	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 10	151	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2243.7119140625	2263.7119140625	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-11	993	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+11	993	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 12	1937	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-13	2000	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+13	2000	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 14	2000	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 15	152	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 16	152	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2245.7119140625	2265.7119140625	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-17	989	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+17	989	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 18	1936	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-19	1999	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+19	1999	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 20	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 21	63	Press 2	930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930, 930
 22	125	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 23	126	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2247.6840820313	2267.6840820313	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-24	1000	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+24	1000	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 25	1931	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-26	2003	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+26	2003	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 27	2003	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 28	112	Press 2	879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879, 879
 29	133	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 30	134	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2249.6960449219	2269.6960449219	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-31	999	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+31	999	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 32	1934	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-33	2022	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+33	2022	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 34	2022	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 35	111	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 36	112	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2251.6940917969	2271.6940917969	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 37	163	Press 2	824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824, 824
-38	999	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+38	999	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 39	1911	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-40	1972	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+40	1972	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 41	1972	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 42	129	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 43	130	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2253.6860351563	2273.6860351563	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 44	209	Press 2	780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780
-45	990	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+45	990	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 46	1930	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-47	1992	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+47	1992	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 48	1992	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 49	131	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 50	132	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2255.6789550781	2275.6789550781	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 51	263	Press 2	726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726, 726
-52	996	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+52	996	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 53	1945	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-54	2018	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+54	2018	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 55	2018	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 56	156	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 57	157	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2257.7219238281	2277.7219238281	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 58	313	Press 2	677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677, 677
-59	991	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+59	991	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 60	1926	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-61	1994	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+61	1994	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 62	1994	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 63	108	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 64	109	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2259.66796875	2279.66796875	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 65	367	Press 2	621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621, 621
 66	433	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-67	946	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+67	946	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 68	1091	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2260.6469726563	2280.6469726563	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-69	1093	OnActionUpdateCooldowns	855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855
+69	1093	EVENT_ACTION_UPDATE_COOLDOWNS	855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855, 855
 70	1096	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2260.6469726563	2314.6469726563	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 71	1098	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2260.6469726563	2314.6469726563	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-72	1592	OnActionUpdateCooldowns	353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353
+72	1592	EVENT_ACTION_UPDATE_COOLDOWNS	353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353, 353
 
 73	1939	Press 1	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5
-74	1953	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-75	2021	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+74	1953	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+75	2021	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 76	2021	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 77	122	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 78	123	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2261.7009277344	2281.7009277344	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 79	420	Press 2	566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566, 566
 80	502	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-81	931	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+81	931	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 82	1093	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 83	1094	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2262.6721191406	2282.6721191406	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-84	1096	OnActionUpdateCooldowns	840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840
+84	1096	EVENT_ACTION_UPDATE_COOLDOWNS	840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840, 840
 85	1097	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 86	1097	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2262.6721191406	2316.6721191406	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 87	1099	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 88	1099	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2262.6721191406	2316.6721191406	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-89	1600	OnActionUpdateCooldowns	332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332
+89	1600	EVENT_ACTION_UPDATE_COOLDOWNS	332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332, 332
 
 90	1907	Press 1	26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26
-91	1937	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-92	1977	OnActionUpdateCooldowns	986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986
+91	1937	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+92	1977	EVENT_ACTION_UPDATE_COOLDOWNS	986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986, 986
 93	1977	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 94	150	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 95	151	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2263.7080078125	2283.7080078125	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 96	475	Press 2	512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512
 97	559	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-98	935	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+98	935	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 99	1096	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 100	1097	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2264.6508789063	2284.6508789063	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-101	1099	OnActionUpdateCooldowns	839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839
+101	1099	EVENT_ACTION_UPDATE_COOLDOWNS	839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839, 839
 102	1100	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 103	1101	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2264.6508789063	2318.6508789063	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 104	1102	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 105	1102	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2264.6508789063	2318.6508789063	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-106	1601	OnActionUpdateCooldowns	331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331
+106	1601	EVENT_ACTION_UPDATE_COOLDOWNS	331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331, 331
 
 107	1929	Press 1	4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
-108	1940	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-109	2005	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+108	1940	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+109	2005	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 110	2005	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 111	138	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 112	138	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2265.7009277344	2285.7009277344	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 113	514	Press 2	474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474, 474
 114	577	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-115	937	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
-116	1085	OnActionUpdateCooldowns	849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849
+115	937	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+116	1085	EVENT_ACTION_UPDATE_COOLDOWNS	849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849, 849
 117	1111	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 118	1111	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2266.6730957031	2286.6730957031	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-119	1113	OnActionUpdateCooldowns	825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825
+119	1113	EVENT_ACTION_UPDATE_COOLDOWNS	825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825, 825
 120	1114	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 121	1115	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2266.6730957031	2320.6730957031	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 122	1116	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 123	1117	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2266.6730957031	2320.6730957031	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-124	1610	OnActionUpdateCooldowns	325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325
+124	1610	EVENT_ACTION_UPDATE_COOLDOWNS	325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325, 325
 
 125	1923	Press 1	11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11
-126	1934	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-127	1999	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+126	1934	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+127	1999	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 128	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 129	137	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 130	138	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2267.6999511719	2287.6999511719	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 131	568	Press 2	421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421
 132	632	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-133	942	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+133	942	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 134	1127	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 135	1128	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2268.6879882813	2288.6879882813	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-136	1129	OnActionUpdateCooldowns	816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816
+136	1129	EVENT_ACTION_UPDATE_COOLDOWNS	816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816, 816
 137	1131	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 138	1131	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2268.6879882813	2322.6879882813	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 139	1133	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 140	1133	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2268.6879882813	2322.6879882813	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-141	1635	OnActionUpdateCooldowns	307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307
+141	1635	EVENT_ACTION_UPDATE_COOLDOWNS	307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307, 307
 
 142	1925	Press 1	17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17
-143	1946	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-144	2001	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+143	1946	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+144	2001	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 145	2001	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 146	177	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 147	177	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2269.7409667969	2289.7409667969	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 148	623	Press 2	367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367, 367
 149	684	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-150	943	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+150	943	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 151	1164	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 152	1165	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2270.7241210938	2290.7241210938	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-153	1166	OnActionUpdateCooldowns	780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780
+153	1166	EVENT_ACTION_UPDATE_COOLDOWNS	780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780, 780
 154	1168	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 155	1168	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2270.7241210938	2324.7241210938	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 156	1170	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 157	1171	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2270.7241210938	2324.7241210938	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-158	1662	OnActionUpdateCooldowns	278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278
+158	1662	EVENT_ACTION_UPDATE_COOLDOWNS	278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278, 278
 
 159	1923	Press 1	16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16
-160	1943	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-161	1983	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+160	1943	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+161	1983	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 162	1983	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 163	183	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 164	184	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2271.7309570313	2291.7309570313	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 165	670	Press 2	321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321
 166	731	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-167	942	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
-168	1134	OnActionUpdateCooldowns	809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809
+167	942	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+168	1134	EVENT_ACTION_UPDATE_COOLDOWNS	809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809, 809
 169	1185	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 170	1185	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2272.7319335938	2292.7319335938	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-171	1187	OnActionUpdateCooldowns	758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758
+171	1187	EVENT_ACTION_UPDATE_COOLDOWNS	758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758, 758
 172	1188	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 173	1188	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2272.7319335938	2326.7319335938	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 174	1190	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 175	1190	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2272.7319335938	2326.7319335938	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-176	1693	OnActionUpdateCooldowns	249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249
+176	1693	EVENT_ACTION_UPDATE_COOLDOWNS	249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249
 
 177	1941	Press 1	3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
-178	1954	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-179	2010	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+178	1954	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+179	2010	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 180	2010	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 181	225	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 182	226	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2273.7819824219	2293.7819824219	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 183	715	Press 2	275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275, 275
-184	991	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+184	991	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 185	1933	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-186	2002	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+186	2002	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 187	2002	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 188	129	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 189	130	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2275.6879882813	2295.6879882813	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 190	776	Press 2	216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216, 216
 191	857	EVENT_ACTION_SLOT_ABILITY_USED	131185	4
-192	937	OnActionUpdateCooldowns	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+192	937	EVENT_ACTION_UPDATE_COOLDOWNS	1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
 193	1093	EVENT_EFFECT_CHANGED	131151	2	8	Minor Brutality	player	0	0	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
 194	1094	EVENT_EFFECT_CHANGED	131151	1	8	Minor Brutality	player	2276.6508789063	2296.6508789063	0	/esoui/art/icons/ability_buff_minor_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61662	1
-195	1119	OnActionUpdateCooldowns	819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819
+195	1119	EVENT_ACTION_UPDATE_COOLDOWNS	819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819, 819
 196	1120	EVENT_EFFECT_CHANGED	131151	2	9	Major Brutality	player	0	0	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 197	1121	EVENT_EFFECT_CHANGED	131151	1	9	Major Brutality	player	2276.6779785156	2330.6779785156	0	/esoui/art/icons/ability_buff_major_brutality.dds		1	0	0	Phrost Pendragon^Mx	34400	61665	1
 198	1122	EVENT_EFFECT_CHANGED	131151	2	13	Major Sorcery	player	0	0	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
 199	1122	EVENT_EFFECT_CHANGED	131151	1	13	Major Sorcery	player	2276.6779785156	2330.6779785156	0	/esoui/art/icons/ability_buff_major_sorcery.dds		1	0	0	Phrost Pendragon^Mx	34400	61687	1
-200	1624	OnActionUpdateCooldowns	315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315
+200	1624	EVENT_ACTION_UPDATE_COOLDOWNS	315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315
 
 201	1931	Press 1	7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7
-202	1946	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-203	2010	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+202	1946	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+203	2010	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 204	2010	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 205	125	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 206	126	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	2277.6940917969	2297.6940917969	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 207	820	Press 2	168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168, 168
-208	993	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-209	1170	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+208	993	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+209	1170	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0

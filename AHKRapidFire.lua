@@ -2,12 +2,14 @@
 AHKRapidFire = {}
 AHKRapidFire.name = "AHKRapidFire"
 AHKRapidFire.savedVars = {}
-
 local ptk = LibPixelControl
+local verbose = false -- true -- false
 local ms_time = GetGameTimeMilliseconds()
 local function dmsg(txt)
-	d((GetGameTimeMilliseconds() - ms_time) .. ") " .. txt)
-	ms_time = GetGameTimeMilliseconds()
+	if verbose then
+		d((GetGameTimeMillisecondsLoc() - ms_time) .. ") " .. txt)
+		ms_time = GetGameTimeMillisecondsLoc()
+	end
 end
 local function dump(o)
 	if type(o) == 'table' then
@@ -24,30 +26,91 @@ end
 local ms_last_action_time = GetGameTimeMilliseconds()
 local ms_hold_next_for = 0
 local function LogValues(eventName, args)
-	local sep = ";"
-	local ms_log_time = GetGameTimeMilliseconds()-ms_last_action_time
-	local strArgs = tostring(ms_log_time)..sep..eventName
-	for _,value in pairs(args) do strArgs = strArgs..sep..tostring(value) end
-	AHKRapidFire.savedVars.log[AHKRapidFire.savedVars.logIdx] = strArgs
-	AHKRapidFire.savedVars.logIdx = AHKRapidFire.savedVars.logIdx + 1
+	if verbose then
+		local sep = ";"
+		local ms_log_time = GetGameTimeMilliseconds()-ms_last_action_time
+		local strArgs = tostring(ms_log_time)..sep..eventName
+		for _,value in pairs(args) do strArgs = strArgs..sep..tostring(value) end
+		AHKRapidFire.savedVars.log[AHKRapidFire.savedVars.logIdx] = strArgs
+		AHKRapidFire.savedVars.logIdx = AHKRapidFire.savedVars.logIdx + 1
+	end
+end
+local GSCDI = GetSlotCooldownInfo
+local GetSlotCooldownInfoLoc = GetSlotCooldownInfo
+local ActionBarSlotType = {}
+ActionBarSlotType[ACTION_TYPE_ABILITY] = "ACTION_TYPE_ABILITY"
+ActionBarSlotType[ACTION_TYPE_COLLECTIBLE] = "ACTION_TYPE_COLLECTIBLE"
+ActionBarSlotType[ACTION_TYPE_EMOTE] = "ACTION_TYPE_EMOTE"
+ActionBarSlotType[ACTION_TYPE_ITEM] = "ACTION_TYPE_ITEM"
+ActionBarSlotType[ACTION_TYPE_NOTHING] = "ACTION_TYPE_NOTHING"
+ActionBarSlotType[ACTION_TYPE_QUEST_ITEM] = "ACTION_TYPE_QUEST_ITEM"
+ActionBarSlotType[ACTION_TYPE_QUICK_CHAT] = "ACTION_TYPE_QUICK_CHAT"
+local function PullCooldownSingle(i) -- actionSlotIndex, remain, duration, global, globalSlotType, locked, name
+	coolDownSingle = {}
+	coolDownSingle.actionSlotIndex = i
+	coolDownSingle.remain, coolDownSingle.duration, coolDownSingle.global, coolDownSingle.globalSlotType = GetSlotCooldownInfoLoc(i)
+	coolDownSingle.globalSlotType = ActionBarSlotType[coolDownSingle.globalSlotType]
+	coolDownSingle.locked = IsSlotLocked(i)
+	coolDownSingle.name = GetSlotName(i)
+	return coolDownSingle
+end
+local function PullCooldowns() -- actionSlotIndex, remain, duration, global, globalSlotType, locked, name
+		local coolDown = {}
+		for i=1,16 do
+			coolDown[i] = PullCooldownSingle(i)
+		end
+	return coolDown
+end
+local curCoolDown = PullCooldowns()
+local prvCoolDown = curCoolDown
+local prvDurations = {}
+local durations = {}
+local function GetCooldownStr(actionSlotIndex)
+	curCoolDown[actionSlotIndex] = PullCooldownSingle(actionSlotIndex)
+	return "idx:"..tostring(curCoolDown[actionSlotIndex].actionSlotIndex)
+		.." rem:"..tostring(curCoolDown[actionSlotIndex].remain)
+		.." dur:"..tostring(curCoolDown[actionSlotIndex].duration)
+		.." gbl:"..tostring(curCoolDown[actionSlotIndex].global)
+		.." typ:"..tostring(curCoolDown[actionSlotIndex].globalSlotType)
+		.." lock:"..tostring(curCoolDown[actionSlotIndex].locked)
+		.." name:"..tostring(curCoolDown[actionSlotIndex].name)
 end
 local keepfiring = false
+local autoDelayMs = 0
+local autoDelayInc = 10
 local function LClick() dmsg("Mouse Click") ptk.SetIndOnFor(ptk.VM_BTN_LEFT, 20)
 	--ms_last_action_time = GetGameTimeMilliseconds()
 	LogValues("Mouse Click", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Mouse Click", {GetCooldownStr(1)})
 end
 local function Press1() dmsg("Press 1") ptk.SetIndOnFor(ptk.VK_1, 20)
 	--ms_last_action_time = GetGameTimeMilliseconds()
 	LogValues("Press 1", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Press 1", {GetCooldownStr(3)})
 end
 local function Press2() dmsg("Press 2") ptk.SetIndOnFor(ptk.VK_2, 20)
 	--ms_last_action_time = GetGameTimeMilliseconds()
 	LogValues("Press 2", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Press 2", {GetCooldownStr(4)})
+end
+local function Press5() dmsg("Press 5") ptk.SetIndOnFor(ptk.VK_5, 20)
+	--ms_last_action_time = GetGameTimeMilliseconds()
+	LogValues("Press 5", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Press 5", {GetCooldownStr(7)})
 end
 local function BarSwap() dmsg("Press backquote") ptk.SetIndOnFor(ptk.VK_BACK_QUOTE, 20)
 	--ms_last_action_time = GetGameTimeMilliseconds()
 	LogValues("Press backquote", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Press backquote", {GetCooldownStr(1)})
+	LogValues("Press backquote", {GetCooldownStr(2)})
+	LogValues("Press backquote", {GetCooldownStr(3)})
 end
+local function PressQ() dmsg("Press Quickslot") ptk.SetIndOnFor(ptk.VK_Q, 20)
+	--ms_last_action_time = GetGameTimeMilliseconds()
+	LogValues("Press Quickslot", {AHKRapidFire.GetSlotCooldownCSV()})
+	LogValues("Press Quickslot", {GetCooldownStr(GetCurrentQuickslot())})
+end
+-- SetCurrentQuickslot(number actionSlotIndex)
 
 
 -- EVENT_COMBAT_EVENT (number eventCode, number ActionResult result, boolean isError, string abilityName, number abilityGraphic, number ActionSlotType abilityActionSlotType, string sourceName, number CombatUnitType sourceType, string targetName, number CombatUnitType targetType, number hitValue, number CombatMechanicType powerType, number DamageType damageType, boolean log, number sourceUnitId, number targetUnitId, number abilityId, number overflow)
@@ -164,10 +227,10 @@ function strInfo(idx)
 	return tostring(obj)
 end
 function AHKRapidFire.GetSlotCooldownCSV()
-	local remain, duration, global, globalSlotType = GetSlotCooldownInfo(1) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+	local remain, duration, global, globalSlotType = GetSlotCooldownInfoLoc(1) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
 	local str = tostring(remain)
 	for i=2,16 do
-		remain, duration, global, globalSlotType = GetSlotCooldownInfo(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
+		remain, duration, global, globalSlotType = GetSlotCooldownInfoLoc(i) -- Returns: number remain, number duration, boolean global, number ActionBarSlotType globalSlotType
 		str = str..", "..tostring(remain)
 	end
 	return str
@@ -254,12 +317,15 @@ function AHKRapidFire:OpenFireFnc()
 		zo_callLater(AHKRapidFire.CeaseFireFnc, t)
 	end
 
-	if true then
-		-- LClick, Press1, BarSwap
+	if false then
+		-- LClick, Press1, Press2, Press5, PressQ, BarSwap
 		-- LClick => EVENT_ACTION_SLOT_ABILITY_USED => (BarSwap)
 		-- LClick => EVENT_ACTION_SLOT_ABILITY_USED => 680ms => (LClick)
 		-- BarSwap => EVENT_ACTION_UPDATE_COOLDOWNS => 50ms => (LClick / Press1)
 		-- Press1 => EVENT_ACTION_SLOT_ABILITY_USED => 350ms => Press2 => imposed delay until 1000 then performs OnActionUpdateCooldowns
+		-- Used Drink from quickslot - 1	22348	OnActionUpdateCooldowns	881, 881, 881, 881, 881, 881, 881, 881, 5000, 881, 881, 881, 881, 881, 6000, 6000
+
+
 		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_ACTION_SLOT_ABILITY_USED, function(_, slotIdx)
 				ms_last_action_time = GetGameTimeMilliseconds()
 			end)
@@ -287,8 +353,95 @@ function AHKRapidFire:OpenFireFnc()
 
 		t=t+2000
 		zo_callLater(AHKRapidFire.CeaseFireFnc, t)
+	end
+
+	if true then
+		prvCoolDown = curCoolDown
+		curCoolDown = PullCooldowns() -- actionSlotIndex, remain, duration, global, globalSlotType, locked, name
+		for actionSlotIndex=1,16 do
+			LogValues("EVENT_ACTION_UPDATE_COOLDOWNS", {GetCooldownStr(actionSlotIndex)})
+		end
+
+		EVENT_MANAGER:RegisterForUpdate("loglots", 10, function()
+				prvCoolDown = curCoolDown
+				curCoolDown = PullCooldowns() -- actionSlotIndex, remain, duration, global, globalSlotType, locked, name
+				for actionSlotIndex=1,16 do
+					if not curCoolDown[actionSlotIndex].global then
+						LogValues("EVENT_ACTION_UPDATE_COOLDOWNS_FALSE", {GetCooldownStr(actionSlotIndex)})
+					end
+				end
+			end)
+
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 2000, function()
+		--		zo_callLater(BarSwap, 0)
+		--		zo_callLater(LClick, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 704	47527	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:2 rem:9 dur:250 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 7000, function()
+		--		SetCurrentQuickslot(9) -- Comberry Chai
+		--		zo_callLater(PressQ, 0)
+		--		zo_callLater(LClick, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 270	26825	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:16 rem:5213 dur:6000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 7000, function()
+		--		SetCurrentQuickslot(9) -- Comberry Chai
+		--		zo_callLater(PressQ, 0)
+		--		zo_callLater(Press1, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 1945	46515	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:16 rem:5184 dur:6000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 7000, function()
+		--		SetCurrentQuickslot(9) -- Comberry Chai
+		--		zo_callLater(PressQ, 0)
+		--		zo_callLater(BarSwap, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- (acts in parallel) 72	21950	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:2 rem:194 dur:250 gbl:false typ:ACTION_TYPE_ABILITY lock:true name:Heavy Attack (Shock)
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 7000, function()
+		--		SetCurrentQuickslot(9) -- Comberry Chai
+		--		zo_callLater(PressQ, 0)
+		--		zo_callLater(BarSwap, 0)
+		--		zo_callLater(Press5, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end)-- 13611	77231	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:16 rem:5164 dur:6000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 2000, function()
+		--		zo_callLater(LClick, 0)
+		--		zo_callLater(Press1, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 417	128021	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:1 rem:653 dur:700 gbl:false typ:ACTION_TYPE_ABILITY lock:true name:Light Attack
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 2000, function()
+		--		zo_callLater(Press1, 0)
+		--		zo_callLater(LClick, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 4661	216363	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:29 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Elemental Susceptibility
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 7000, function()
+		--		zo_callLater(function()
+		--				SetCurrentQuickslot(9) -- Comberry Chai
+		--				PressQ()
+		--			end, 0)
+		--		zo_callLater(function()
+		--				SetCurrentQuickslot(10) -- Essence of Weapon Crit
+		--				PressQ()
+		--			end, autoDelayMs)
+		--		autoDelayMs = autoDelayMs + autoDelayInc
+		--	end) -- 27	18537	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Comberry Chai
+		EVENT_MANAGER:RegisterForUpdate("presslots", 45000+1000, function()
+				SetCurrentQuickslot(10) -- Essence of Weapon Crit
+				zo_callLater(PressQ, 0)
+				zo_callLater(Press1, autoDelayMs)
+				autoDelayMs = autoDelayMs + autoDelayInc
+			end) -- 39	94313	EVENT_ACTION_UPDATE_COOLDOWNS_FALSE	idx:10 rem:45000 dur:45000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Essence of Weapon Crit
+
+
+		--EVENT_MANAGER:RegisterForUpdate("presslots", 100, function() -- mashes the button
+		--		local actionSlotIndex = 1
+		--		local remain, duration, global, globalSlotType = GetSlotCooldownInfoLoc(actionSlotIndex)
+		--		if not global then
+		--			zo_callLater(Press1, 0)
+		--			zo_callLater(LClick, 100)
+		--		end
+		--	end)
 
 	end
+
 
 
 	--zo_callLater(function()
@@ -310,6 +463,9 @@ end
 function AHKRapidFire:OpenFire()
 	if not keepfiring then
 		keepfiring = true
+		autoDelayInc = 10
+		--autoDelayMs = 0 - (autoDelayInc * 2)
+		autoDelayMs = 60 - (autoDelayInc * 2)
 		AHKRapidFire:OpenFireFnc()
 	else
 		keepfiring = false
@@ -444,25 +600,68 @@ function AHKRapidFire:Initialize()
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_COMBAT_EVENT, OnEventCombatEvent)
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name, EVENT_RETICLE_TARGET_CHANGED, OnEventReticleChanged)
 
+	-- For later - EVENT_PLAYER_STUNNED_STATE_CHANGED, EVENT_PLAYER_DEAD, EVENT_POWER_UPDATE
+
 
 	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_ABILITY_USED, function(...) LogValues("EVENT_ACTION_SLOT_ABILITY_USED", {...}) end)
 	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_UPDATE_COOLDOWNS, function(...) LogValues("EVENT_ACTION_UPDATE_COOLDOWNS", {...}) end)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_UPDATE_COOLDOWNS, function() LogValues("OnActionUpdateCooldowns", {AHKRapidFire.GetSlotCooldownCSV()}) end)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_STATE_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_STATE_UPDATED", {...}) end)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_EFFECT_CHANGED, function(...) LogValues("EVENT_EFFECT_CHANGED", {...}) end)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_WEAPON_PAIR_LOCK_CHANGED, function(...) LogValues("EVENT_WEAPON_PAIR_LOCK_CHANGED", {...}) end)
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_UPDATED", {...}) end)
-	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_COMBAT_EVENT, function(...) LogValues("EVENT_COMBAT_EVENT", {...}) end)
+	--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_UPDATE_COOLDOWNS, function() LogValues("EVENT_ACTION_UPDATE_COOLDOWNS", {AHKRapidFire.GetSlotCooldownCSV()}) end)
+	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_UPDATE_COOLDOWNS, function()
+			prvCoolDown = curCoolDown
+			curCoolDown = PullCooldowns() -- actionSlotIndex, remain, duration, global, globalSlotType, locked, name
+			for actionSlotIndex=1,16 do
+				LogValues("EVENT_ACTION_UPDATE_COOLDOWNS", {GetCooldownStr(actionSlotIndex)})
+			end
+    
+			prvDurations = durations
+			durations = {}
+			for actionSlotIndex=1,16 do
+				_, durations[actionSlotIndex], _, _ = GetSlotCooldownInfoLoc(actionSlotIndex)
+			end
+			local quickIdx = GetCurrentQuickslot()
+    
+			if durations[quickIdx] ~= prvDurations[quickIdx] and durations[1] == 1000 and durations[quickIdx] == 5000 then
+				d("Starting: Drink")
+			elseif durations[1] ~= prvDurations[1] and durations[2] ~= prvDurations[2] and durations[1] == 250 and durations[2] == 250 then
+				d("Starting: Bar Swap")
+			elseif durations[1] ~= prvDurations[1] and durations[2] ~= prvDurations[2] and durations[1] == 700 and durations[2] == 700 then
+				d("Starting: Light Attack")
+			elseif durations[1] ~= prvDurations[1] and durations[quickIdx] ~= prvDurations[quickIdx] and durations[1] == 1000 and durations[quickIdx] == 6000 then
+				d("Starting: Food")
+			elseif durations[1] ~= prvDurations[1] and durations[2] ~= prvDurations[2] and durations[1] == 1000 and durations[2] == 1000 then
+				d("Starting: Slot Ability")
+			end
+    
+		end)
 
-	EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_HOTBAR_SLOT_CHANGE_REQUESTED, function(...) LogValues("EVENT_HOTBAR_SLOT_CHANGE_REQUESTED", {...}) end)
+	if GetUnitDisplayName("player") == "@Phrosty1" then
+		verbose = true
+		verbose = false
+		--EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_STATE_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_STATE_UPDATED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_EFFECT_CHANGED, function(...) LogValues("EVENT_EFFECT_CHANGED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_WEAPON_PAIR_LOCK_CHANGED, function(...) LogValues("EVENT_WEAPON_PAIR_LOCK_CHANGED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ACTION_SLOT_UPDATED, function(...) LogValues("EVENT_ACTION_SLOT_UPDATED", {...}) end)
 
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_COMBAT_EVENT, function(...) LogValues("EVENT_COMBAT_EVENT", {...}) end)
 
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_INVENTORY_SINGLE_SLOT_UPDATE, function(...) LogValues("EVENT_INVENTORY_SINGLE_SLOT_UPDATE", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_HOT_BAR_RESULT, function(...) LogValues("EVENT_HOT_BAR_RESULT", {...}) end)
+
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_INTERACT_BUSY, function(...) LogValues("EVENT_INTERACT_BUSY", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ITEM_ON_COOLDOWN, function(...) LogValues("EVENT_ITEM_ON_COOLDOWN", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_ITEM_SLOT_CHANGED, function(...) LogValues("EVENT_ITEM_SLOT_CHANGED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_PENDING_INTERACTION_CANCELLED, function(...) LogValues("EVENT_PENDING_INTERACTION_CANCELLED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_PLAYER_ACTIVELY_ENGAGED_STATE, function(...) LogValues("EVENT_PLAYER_ACTIVELY_ENGAGED_STATE", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_SYNERGY_ABILITY_CHANGED, function(...) LogValues("EVENT_SYNERGY_ABILITY_CHANGED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_TARGET_CHANGED, function(...) LogValues("EVENT_TARGET_CHANGED", {...}) end)
+		EVENT_MANAGER:RegisterForEvent(AHKRapidFire.name.."LOG", EVENT_UI_ERROR, function(...) LogValues("EVENT_UI_ERROR", {...}) end)
+	end
 end
 
 -- Then we create an event handler function which will be called when the "addon loaded" event
 -- occurs. We'll use this to initialize our addon after all of its resources are fully loaded.
 function AHKRapidFire.OnAddOnLoaded(event, addonName) -- The event fires each time *any* addon loads - but we only care about when our own addon loads.
-    if addonName == AHKRapidFire.name then AHKRapidFire:Initialize() end
+    --if addonName == AHKRapidFire.name then AHKRapidFire:Initialize() end
 end
 
 -- Finally, we'll register our event handler function to be called when the proper event occurs.

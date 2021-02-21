@@ -1,231 +1,231 @@
 1	8963	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 2	17248	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-3	17309	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+3	17309	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 4	17309	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 5	160	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3246.6550292969	3266.6550292969	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-6	993	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+6	993	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 7	1946	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-8	2012	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+8	2012	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 9	2012	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 10	144	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 11	145	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3248.6499023438	3268.6499023438	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-12	1000	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+12	1000	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 13	1933	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-14	2004	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+14	2004	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 15	2004	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 16	133	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 17	134	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3250.6430664063	3270.6430664063	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-18	997	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+18	997	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 19	1930	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-20	2001	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+20	2001	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 21	2001	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 22	71	Mouse Click	917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917, 917
 23	131	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 24	132	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3252.6411132813	3272.6411132813	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-25	993	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+25	993	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 26	1928	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-27	1998	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+27	1998	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 28	1998	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 29	122	Mouse Click	867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867, 867
 30	137	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 31	137	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3254.6450195313	3274.6450195313	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-32	992	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+32	992	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 33	1925	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-34	2002	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+34	2002	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 35	2002	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 36	130	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 37	130	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3256.6398925781	3276.6398925781	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 38	172	Mouse Click	817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817, 817
-39	995	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+39	995	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 40	1927	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-41	2004	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+41	2004	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 42	2004	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 43	155	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 44	156	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3258.6689453125	3278.6689453125	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 45	224	Mouse Click	766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766, 766
-46	994	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+46	994	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 47	1929	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-48	2010	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+48	2010	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 49	2010	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 50	166	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 51	166	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3260.6889648438	3280.6889648438	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 52	271	Mouse Click	718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718, 718
-53	989	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+53	989	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 54	1912	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-55	1988	OnActionUpdateCooldowns	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
+55	1988	EVENT_ACTION_UPDATE_COOLDOWNS	990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990, 990
 56	1988	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 57	133	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 58	133	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3262.6459960938	3282.6459960938	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 59	315	Mouse Click	675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675
-60	996	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+60	996	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 61	1925	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-62	1998	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+62	1998	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 63	1998	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 64	146	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 65	147	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3264.6569824219	3284.6569824219	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 66	366	Mouse Click	622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622, 622
 67	440	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-68	929	OnActionUpdateCooldowns	700, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58
-69	991	OnActionUpdateCooldowns	638, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-70	1099	OnActionUpdateCooldowns	531, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+68	929	EVENT_ACTION_UPDATE_COOLDOWNS	700, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58
+69	991	EVENT_ACTION_UPDATE_COOLDOWNS	638, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+70	1099	EVENT_ACTION_UPDATE_COOLDOWNS	531, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 71	1596	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3266.1049804688	3286.1049804688	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 72	1596	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3266.1049804688	3286.1049804688	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-73	1597	OnActionUpdateCooldowns	35, 204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-74	1636	OnActionUpdateCooldowns	0, 164, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-75	1805	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+73	1597	EVENT_ACTION_UPDATE_COOLDOWNS	35, 204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+74	1636	EVENT_ACTION_UPDATE_COOLDOWNS	0, 164, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+75	1805	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 76	1928	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-77	1997	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+77	1997	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 78	1997	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 79	134	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 80	135	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3266.6420898438	3286.6420898438	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 81	417	Mouse Click	572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572, 572
 82	489	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-83	929	OnActionUpdateCooldowns	700, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
-84	996	OnActionUpdateCooldowns	635, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-85	1111	OnActionUpdateCooldowns	519, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-86	1600	OnActionUpdateCooldowns	29, 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-87	1635	OnActionUpdateCooldowns	0, 175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+83	929	EVENT_ACTION_UPDATE_COOLDOWNS	700, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+84	996	EVENT_ACTION_UPDATE_COOLDOWNS	635, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+85	1111	EVENT_ACTION_UPDATE_COOLDOWNS	519, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+86	1600	EVENT_ACTION_UPDATE_COOLDOWNS	29, 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+87	1635	EVENT_ACTION_UPDATE_COOLDOWNS	0, 175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 88	1669	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3268.1770019531	3288.1770019531	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 89	1669	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3268.1770019531	3288.1770019531	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-90	1670	OnActionUpdateCooldowns	0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-91	1811	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+90	1670	EVENT_ACTION_UPDATE_COOLDOWNS	0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+91	1811	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 92	1929	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-93	1998	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+93	1998	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 94	1998	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 95	141	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 96	142	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3268.6469726563	3288.6469726563	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 97	464	Mouse Click	525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525, 525
 98	539	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-99	944	OnActionUpdateCooldowns	700, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45
-100	993	OnActionUpdateCooldowns	653, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-101	1101	OnActionUpdateCooldowns	544, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+99	944	EVENT_ACTION_UPDATE_COOLDOWNS	700, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45
+100	993	EVENT_ACTION_UPDATE_COOLDOWNS	653, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+101	1101	EVENT_ACTION_UPDATE_COOLDOWNS	544, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 102	1550	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3270.0568847656	3290.0568847656	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-103	1649	OnActionUpdateCooldowns	0, 152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-104	1673	OnActionUpdateCooldowns	0, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-105	1805	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+103	1649	EVENT_ACTION_UPDATE_COOLDOWNS	0, 152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+104	1673	EVENT_ACTION_UPDATE_COOLDOWNS	0, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+105	1805	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 106	1927	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-107	2007	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+107	2007	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 108	2007	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 109	140	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 110	141	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3270.6540527344	3290.6540527344	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 111	513	Mouse Click	477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477, 477
 112	577	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-113	600	OnActionUpdateCooldowns	389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389
-114	946	OnActionUpdateCooldowns	700, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43
-115	996	OnActionUpdateCooldowns	651, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-116	1092	OnActionUpdateCooldowns	554, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+113	600	EVENT_ACTION_UPDATE_COOLDOWNS	389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389, 389
+114	946	EVENT_ACTION_UPDATE_COOLDOWNS	700, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43
+115	996	EVENT_ACTION_UPDATE_COOLDOWNS	651, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+116	1092	EVENT_ACTION_UPDATE_COOLDOWNS	554, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 117	1597	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3272.1101074219	3292.1101074219	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 118	1598	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3272.1101074219	3292.1101074219	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-119	1598	OnActionUpdateCooldowns	50, 196, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-120	1651	OnActionUpdateCooldowns	0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-121	1799	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+119	1598	EVENT_ACTION_UPDATE_COOLDOWNS	50, 196, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+120	1651	EVENT_ACTION_UPDATE_COOLDOWNS	0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+121	1799	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 122	1923	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-123	1993	OnActionUpdateCooldowns	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
+123	1993	EVENT_ACTION_UPDATE_COOLDOWNS	988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988, 988
 124	1993	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 125	118	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 126	119	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3272.625	3292.625	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 127	569	Mouse Click	418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418
 128	633	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-129	933	OnActionUpdateCooldowns	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
-130	992	OnActionUpdateCooldowns	641, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-131	1105	OnActionUpdateCooldowns	529, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+129	933	EVENT_ACTION_UPDATE_COOLDOWNS	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
+130	992	EVENT_ACTION_UPDATE_COOLDOWNS	641, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+131	1105	EVENT_ACTION_UPDATE_COOLDOWNS	529, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 132	1585	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3274.0920410156	3294.0920410156	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-133	1613	OnActionUpdateCooldowns	21, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-134	1639	OnActionUpdateCooldowns	0, 165, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-135	1808	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+133	1613	EVENT_ACTION_UPDATE_COOLDOWNS	21, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+134	1639	EVENT_ACTION_UPDATE_COOLDOWNS	0, 165, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+135	1808	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 136	1931	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-137	2007	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+137	2007	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 138	2007	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 139	144	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 140	146	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3274.6579589844	3294.6579589844	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 141	617	Mouse Click	370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370, 370
 142	703	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-143	933	OnActionUpdateCooldowns	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
-144	990	OnActionUpdateCooldowns	642, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-145	1108	OnActionUpdateCooldowns	524, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+143	933	EVENT_ACTION_UPDATE_COOLDOWNS	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
+144	990	EVENT_ACTION_UPDATE_COOLDOWNS	642, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+145	1108	EVENT_ACTION_UPDATE_COOLDOWNS	524, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 146	1618	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3276.1320800781	3296.1320800781	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 147	1619	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3276.1320800781	3296.1320800781	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-148	1619	OnActionUpdateCooldowns	14, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-149	1634	OnActionUpdateCooldowns	0, 175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-150	1808	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+148	1619	EVENT_ACTION_UPDATE_COOLDOWNS	14, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+149	1634	EVENT_ACTION_UPDATE_COOLDOWNS	0, 175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+150	1808	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 151	1926	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-152	1999	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+152	1999	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 153	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 154	158	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 155	159	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3276.669921875	3296.669921875	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-156	601	OnActionUpdateCooldowns	386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386
+156	601	EVENT_ACTION_UPDATE_COOLDOWNS	386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386, 386
 157	667	Mouse Click	320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320
 158	749	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-159	942	OnActionUpdateCooldowns	700, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45
-160	988	OnActionUpdateCooldowns	655, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-161	1103	OnActionUpdateCooldowns	541, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+159	942	EVENT_ACTION_UPDATE_COOLDOWNS	700, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45
+160	988	EVENT_ACTION_UPDATE_COOLDOWNS	655, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+161	1103	EVENT_ACTION_UPDATE_COOLDOWNS	541, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 162	1624	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3278.1359863281	3298.1359863281	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 163	1624	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3278.1359863281	3298.1359863281	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-164	1625	OnActionUpdateCooldowns	19, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-165	1651	OnActionUpdateCooldowns	0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-166	1810	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+164	1625	EVENT_ACTION_UPDATE_COOLDOWNS	19, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+165	1651	EVENT_ACTION_UPDATE_COOLDOWNS	0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+166	1810	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 167	1928	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-168	1994	OnActionUpdateCooldowns	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
+168	1994	EVENT_ACTION_UPDATE_COOLDOWNS	989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989, 989
 169	1994	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 170	154	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 171	154	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3278.662109375	3298.662109375	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 172	720	Mouse Click	269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269
 173	785	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-174	935	OnActionUpdateCooldowns	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
-175	995	OnActionUpdateCooldowns	642, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-176	1092	OnActionUpdateCooldowns	544, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+174	935	EVENT_ACTION_UPDATE_COOLDOWNS	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
+175	995	EVENT_ACTION_UPDATE_COOLDOWNS	642, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+176	1092	EVENT_ACTION_UPDATE_COOLDOWNS	544, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 177	1568	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3280.0759277344	3300.0759277344	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-178	1631	OnActionUpdateCooldowns	5, 161, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-179	1645	OnActionUpdateCooldowns	0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-180	1802	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+178	1631	EVENT_ACTION_UPDATE_COOLDOWNS	5, 161, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+179	1645	EVENT_ACTION_UPDATE_COOLDOWNS	0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+180	1802	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 181	1935	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-182	1999	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+182	1999	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 183	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 184	145	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 185	146	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3280.6499023438	3300.6499023438	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 186	764	Mouse Click	224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224, 224
 187	838	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-188	934	OnActionUpdateCooldowns	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
-189	995	OnActionUpdateCooldowns	638, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-190	1091	OnActionUpdateCooldowns	542, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+188	934	EVENT_ACTION_UPDATE_COOLDOWNS	700, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54
+189	995	EVENT_ACTION_UPDATE_COOLDOWNS	638, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+190	1091	EVENT_ACTION_UPDATE_COOLDOWNS	542, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 191	1576	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3282.08203125	3302.08203125	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 192	1576	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3282.08203125	3302.08203125	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-193	1577	OnActionUpdateCooldowns	58, 216, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-194	1643	OnActionUpdateCooldowns	0, 148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-195	1799	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+193	1577	EVENT_ACTION_UPDATE_COOLDOWNS	58, 216, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+194	1643	EVENT_ACTION_UPDATE_COOLDOWNS	0, 148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+195	1799	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 196	1935	Press 1	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-197	2008	OnActionUpdateCooldowns	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
+197	2008	EVENT_ACTION_UPDATE_COOLDOWNS	987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987, 987
 198	2008	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
 199	123	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 200	123	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	3282.6359863281	3302.6359863281	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-201	628	OnActionUpdateCooldowns	358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358
+201	628	EVENT_ACTION_UPDATE_COOLDOWNS	358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358, 358
 202	822	Mouse Click	165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165, 165
 203	898	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-204	946	OnActionUpdateCooldowns	700, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41
-205	991	OnActionUpdateCooldowns	654, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-206	1078	OnActionUpdateCooldowns	569, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-207	1569	OnActionUpdateCooldowns	75, 206, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+204	946	EVENT_ACTION_UPDATE_COOLDOWNS	700, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41
+205	991	EVENT_ACTION_UPDATE_COOLDOWNS	654, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+206	1078	EVENT_ACTION_UPDATE_COOLDOWNS	569, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+207	1569	EVENT_ACTION_UPDATE_COOLDOWNS	75, 206, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 208	1636	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3284.1508789063	3304.1508789063	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
 209	1636	EVENT_EFFECT_CHANGED	131151	3	48	Major Breach	reticleover	3284.1508789063	3304.1508789063	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	34400	61743	1
-210	1636	OnActionUpdateCooldowns	10, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-211	1651	OnActionUpdateCooldowns	0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-212	1778	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-213	3647	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+210	1636	EVENT_ACTION_UPDATE_COOLDOWNS	10, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+211	1651	EVENT_ACTION_UPDATE_COOLDOWNS	0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+212	1778	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+213	3647	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0

@@ -1,0 +1,243 @@
+1	13691	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+2	13691	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+3	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+4	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+5	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+6	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+7	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+8	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+9	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+10	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+11	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+12	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+13	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+14	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+15	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+16	13692	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+
+Comberry Chai
+17	18704	EVENT_TARGET_CHANGED	131117	player
+18	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Light Attack
+19	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Heavy Attack (Shock)
+20	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Elemental Susceptibility
+21	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Igneous Weapons
+22	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Rage
+23	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Coagulating Blood
+24	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Light
+25	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Thunderous Rage
+26	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Comberry Chai
+27	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Invisibility
+28	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Immovability
+29	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Spell Critical
+30	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Fezez the Merchant
+31	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Tythis Andromo, the Banker
+32	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Longfin Pasty with Melon Sauce
+33	18704	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:990 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+34	18824	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Light Attack
+35	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Heavy Attack (Shock)
+36	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Elemental Susceptibility
+37	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Igneous Weapons
+38	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Rage
+39	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Coagulating Blood
+40	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Light
+41	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Thunderous Rage
+42	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:5000 dur:5000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Comberry Chai
+43	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Invisibility
+44	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Immovability
+45	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Spell Critical
+46	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Fezez the Merchant
+47	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:870 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Tythis Andromo, the Banker
+48	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:6000 dur:6000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Longfin Pasty with Melon Sauce
+49	18825	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:6000 dur:6000 gbl:false typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+50	18827	EVENT_EFFECT_CHANGED	131151	1	54894	Magicka Recovery	player	13461.805664063	15561.805664063	0	/esoui/art/icons/crafting_dom_beer_002.dds		1	0	0	Phrost Pendragon^Mx	35276	61325	1
+51	18830	EVENT_INVENTORY_SINGLE_SLOT_UPDATE	131222	1	62	false	19	0	-1
+52	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+53	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+54	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+55	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+56	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+57	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+58	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+59	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+60	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:4122 dur:5000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+61	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+62	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+63	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+64	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+65	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+66	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:5122 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+67	19703	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:5122 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+68	23834	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+69	23834	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+70	23834	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+71	23834	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+72	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+73	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+74	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+75	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+76	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+77	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+78	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+79	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+80	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+81	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+82	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:991 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+83	23835	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:991 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+
+Light Attack
+84	24033	EVENT_TARGET_CHANGED	131117	player
+85	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:690 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+86	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+87	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+88	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+89	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+90	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+91	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+92	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+93	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+94	24114	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+95	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+96	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+97	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+98	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+99	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:711 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+100	24115	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:711 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+101	24117	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
+102	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:578 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+103	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:700 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+104	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+105	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+106	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+107	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+108	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+109	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+110	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+111	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+112	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+113	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+114	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+115	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+116	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:599 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+117	24227	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:599 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+118	24786	EVENT_TARGET_CHANGED	131117	reticleover
+119	24786	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:18 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+120	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:140 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+121	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+122	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+123	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+124	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+125	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+126	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+127	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+128	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+129	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+130	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+131	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+132	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+133	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:39 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+134	24787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:39 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+135	24794	EVENT_INVENTORY_SINGLE_SLOT_UPDATE	131222	0	20	false	31	3	0
+136	24798	EVENT_PLAYER_ACTIVELY_ENGAGED_STATE	131437	true
+137	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+138	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:119 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+139	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+140	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+141	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+142	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+143	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+144	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+145	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+146	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+147	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+148	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+149	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+150	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+151	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:18 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+152	24807	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:18 dur:6000 gbl:false typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+153	24826	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+154	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:99 dur:700 gbl:false typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+155	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+156	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+157	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+158	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+159	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+160	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+161	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+162	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+163	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+164	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+165	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+166	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+167	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+168	24827	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+169	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+170	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+171	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+172	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+173	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+174	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+175	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+176	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+177	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+178	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+179	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+180	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+181	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+182	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+183	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+184	24927	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+185	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+186	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+187	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+188	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+189	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+190	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+191	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+192	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+193	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+194	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+195	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+196	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+197	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+198	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+199	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+200	26787	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+
+Elemental Susceptibility
+201	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Light Attack
+202	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:true name:Heavy Attack (Shock)
+203	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Elemental Susceptibility
+204	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Igneous Weapons
+205	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Rage
+206	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Coagulating Blood
+207	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Inner Light
+208	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Thunderous Rage
+209	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Comberry Chai
+210	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Invisibility
+211	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Immovability
+212	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Essence of Spell Critical
+213	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Fezez the Merchant
+214	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Tythis Andromo, the Banker
+215	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Longfin Pasty with Melon Sauce
+216	29758	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:989 dur:1000 gbl:true typ:ACTION_TYPE_ABILITY lock:false name:Solitude Salmon-Millet Soup
+217	29759	EVENT_ACTION_SLOT_ABILITY_USED	131185	3
+218	29879	EVENT_EFFECT_CHANGED	131151	1	48	Major Breach	reticleover	13472.859375	13492.859375	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	71214	61743	1
+219	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:1 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Light Attack
+220	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:2 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:true name:Heavy Attack (Shock)
+221	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:3 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Elemental Susceptibility
+222	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:4 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Igneous Weapons
+223	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:5 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Rage
+224	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:6 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Coagulating Blood
+225	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:7 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Inner Light
+226	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:8 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Thunderous Rage
+227	30750	EVENT_ACTION_UPDATE_COOLDOWNS	idx:9 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Comberry Chai
+228	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:10 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Invisibility
+229	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:11 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Immovability
+230	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:12 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Essence of Spell Critical
+231	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:13 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Fezez the Merchant
+232	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:14 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Tythis Andromo, the Banker
+233	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:15 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Longfin Pasty with Melon Sauce
+234	30751	EVENT_ACTION_UPDATE_COOLDOWNS	idx:16 rem:0 dur:0 gbl:true typ:ACTION_TYPE_NOTHING lock:false name:Solitude Salmon-Millet Soup
+235	30771	EVENT_PLAYER_ACTIVELY_ENGAGED_STATE	131437	false
+236	34791	EVENT_TARGET_CHANGED	131117	reticleover
+237	34791	EVENT_EFFECT_CHANGED	131151	2	48	Major Breach	reticleover	0	0	0	/esoui/art/icons/ability_debuff_major_breach.dds		2	0	0	Target Frost Atronach	71214	61743	1

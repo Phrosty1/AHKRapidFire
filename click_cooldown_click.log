@@ -1,119 +1,119 @@
 1	10123	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-2	10192	OnActionUpdateCooldowns	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+2	10192	EVENT_ACTION_UPDATE_COOLDOWNS	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 3	10192	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-4	100	OnActionUpdateCooldowns	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-5	611	OnActionUpdateCooldowns	80, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-6	695	OnActionUpdateCooldowns	0, 105, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-7	804	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+4	100	EVENT_ACTION_UPDATE_COOLDOWNS	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+5	611	EVENT_ACTION_UPDATE_COOLDOWNS	80, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+6	695	EVENT_ACTION_UPDATE_COOLDOWNS	0, 105, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+7	804	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 8	1935	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-9	1995	OnActionUpdateCooldowns	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+9	1995	EVENT_ACTION_UPDATE_COOLDOWNS	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 10	1995	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-11	99	OnActionUpdateCooldowns	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-12	619	OnActionUpdateCooldowns	70, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-13	680	OnActionUpdateCooldowns	10, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-14	689	OnActionUpdateCooldowns	0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-15	799	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+11	99	EVENT_ACTION_UPDATE_COOLDOWNS	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+12	619	EVENT_ACTION_UPDATE_COOLDOWNS	70, 180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+13	680	EVENT_ACTION_UPDATE_COOLDOWNS	10, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+14	689	EVENT_ACTION_UPDATE_COOLDOWNS	0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+15	799	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 16	1941	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-17	2001	OnActionUpdateCooldowns	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+17	2001	EVENT_ACTION_UPDATE_COOLDOWNS	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 18	2001	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-19	90	OnActionUpdateCooldowns	600, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-20	680	OnActionUpdateCooldowns	10, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-21	692	OnActionUpdateCooldowns	0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-22	791	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-23	1621	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+19	90	EVENT_ACTION_UPDATE_COOLDOWNS	600, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+20	680	EVENT_ACTION_UPDATE_COOLDOWNS	10, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+21	692	EVENT_ACTION_UPDATE_COOLDOWNS	0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+22	791	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+23	1621	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 24	1944	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-25	2005	OnActionUpdateCooldowns	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+25	2005	EVENT_ACTION_UPDATE_COOLDOWNS	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 26	2005	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-27	91	OnActionUpdateCooldowns	599, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+27	91	EVENT_ACTION_UPDATE_COOLDOWNS	599, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 28	112	Mouse Click	579, 680, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-29	688	OnActionUpdateCooldowns	1, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-30	698	OnActionUpdateCooldowns	0, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-31	709	OnActionUpdateCooldowns	0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-32	791	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+29	688	EVENT_ACTION_UPDATE_COOLDOWNS	1, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+30	698	EVENT_ACTION_UPDATE_COOLDOWNS	0, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+31	709	EVENT_ACTION_UPDATE_COOLDOWNS	0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+32	791	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 33	1932	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-34	2003	OnActionUpdateCooldowns	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+34	2003	EVENT_ACTION_UPDATE_COOLDOWNS	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 35	2003	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-36	101	OnActionUpdateCooldowns	589, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+36	101	EVENT_ACTION_UPDATE_COOLDOWNS	589, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 37	210	Mouse Click	479, 590, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-38	694	OnActionUpdateCooldowns	0, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-39	714	OnActionUpdateCooldowns	0, 86, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-40	805	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+38	694	EVENT_ACTION_UPDATE_COOLDOWNS	0, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+39	714	EVENT_ACTION_UPDATE_COOLDOWNS	0, 86, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+40	805	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 41	1926	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-42	1996	OnActionUpdateCooldowns	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+42	1996	EVENT_ACTION_UPDATE_COOLDOWNS	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 43	1996	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-44	93	OnActionUpdateCooldowns	598, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+44	93	EVENT_ACTION_UPDATE_COOLDOWNS	598, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 45	313	Mouse Click	377, 479, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-46	694	OnActionUpdateCooldowns	0, 98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-47	704	OnActionUpdateCooldowns	0, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-48	796	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-49	1712	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+46	694	EVENT_ACTION_UPDATE_COOLDOWNS	0, 98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+47	704	EVENT_ACTION_UPDATE_COOLDOWNS	0, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+48	796	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+49	1712	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 50	1933	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-51	2004	OnActionUpdateCooldowns	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+51	2004	EVENT_ACTION_UPDATE_COOLDOWNS	690, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 52	2004	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-53	90	OnActionUpdateCooldowns	599, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+53	90	EVENT_ACTION_UPDATE_COOLDOWNS	599, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 54	413	Mouse Click	276, 377, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-55	605	OnActionUpdateCooldowns	85, 186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-56	695	OnActionUpdateCooldowns	0, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-57	706	OnActionUpdateCooldowns	0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-58	793	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+55	605	EVENT_ACTION_UPDATE_COOLDOWNS	85, 186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+56	695	EVENT_ACTION_UPDATE_COOLDOWNS	0, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+57	706	EVENT_ACTION_UPDATE_COOLDOWNS	0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+58	793	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 59	1932	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-60	1998	OnActionUpdateCooldowns	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+60	1998	EVENT_ACTION_UPDATE_COOLDOWNS	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 61	1998	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-62	84	OnActionUpdateCooldowns	605, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+62	84	EVENT_ACTION_UPDATE_COOLDOWNS	605, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 63	513	Mouse Click	176, 271, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-64	660	OnActionUpdateCooldowns	29, 124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-65	695	OnActionUpdateCooldowns	0, 89, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-66	794	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+64	660	EVENT_ACTION_UPDATE_COOLDOWNS	29, 124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+65	695	EVENT_ACTION_UPDATE_COOLDOWNS	0, 89, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+66	794	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 67	1933	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-68	1999	OnActionUpdateCooldowns	688, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+68	1999	EVENT_ACTION_UPDATE_COOLDOWNS	688, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 69	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-70	108	OnActionUpdateCooldowns	580, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+70	108	EVENT_ACTION_UPDATE_COOLDOWNS	580, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 71	613	Mouse Click	75, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-72	668	OnActionUpdateCooldowns	20, 140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+72	668	EVENT_ACTION_UPDATE_COOLDOWNS	20, 140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 73	679	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-74	680	OnActionUpdateCooldowns	8, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-75	695	OnActionUpdateCooldowns	700, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-76	785	OnActionUpdateCooldowns	610, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-77	1403	OnActionUpdateCooldowns	0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-78	1496	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-79	1613	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+74	680	EVENT_ACTION_UPDATE_COOLDOWNS	8, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+75	695	EVENT_ACTION_UPDATE_COOLDOWNS	700, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+76	785	EVENT_ACTION_UPDATE_COOLDOWNS	610, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+77	1403	EVENT_ACTION_UPDATE_COOLDOWNS	0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+78	1496	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+79	1613	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 80	1934	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-81	1999	OnActionUpdateCooldowns	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+81	1999	EVENT_ACTION_UPDATE_COOLDOWNS	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 82	1999	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-83	98	OnActionUpdateCooldowns	592, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-84	683	OnActionUpdateCooldowns	5, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-85	695	OnActionUpdateCooldowns	0, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-86	708	OnActionUpdateCooldowns	0, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+83	98	EVENT_ACTION_UPDATE_COOLDOWNS	592, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+84	683	EVENT_ACTION_UPDATE_COOLDOWNS	5, 113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+85	695	EVENT_ACTION_UPDATE_COOLDOWNS	0, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+86	708	EVENT_ACTION_UPDATE_COOLDOWNS	0, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 87	723	Mouse Click	0, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-88	797	OnActionUpdateCooldowns	687, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+88	797	EVENT_ACTION_UPDATE_COOLDOWNS	687, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 89	797	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-90	811	OnActionUpdateCooldowns	673, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-91	896	OnActionUpdateCooldowns	588, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-92	1484	OnActionUpdateCooldowns	0, 111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-93	1596	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+90	811	EVENT_ACTION_UPDATE_COOLDOWNS	673, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+91	896	EVENT_ACTION_UPDATE_COOLDOWNS	588, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+92	1484	EVENT_ACTION_UPDATE_COOLDOWNS	0, 111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+93	1596	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 94	1932	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-95	1996	OnActionUpdateCooldowns	686, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+95	1996	EVENT_ACTION_UPDATE_COOLDOWNS	686, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 96	1996	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-97	98	OnActionUpdateCooldowns	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-98	694	OnActionUpdateCooldowns	0, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-99	721	OnActionUpdateCooldowns	0, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-100	799	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+97	98	EVENT_ACTION_UPDATE_COOLDOWNS	590, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+98	694	EVENT_ACTION_UPDATE_COOLDOWNS	0, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+99	721	EVENT_ACTION_UPDATE_COOLDOWNS	0, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+100	799	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 101	821	Mouse Click	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-102	888	OnActionUpdateCooldowns	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+102	888	EVENT_ACTION_UPDATE_COOLDOWNS	689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 103	888	EVENT_ACTION_SLOT_ABILITY_USED	131185	1
-104	996	OnActionUpdateCooldowns	582, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-105	1562	OnActionUpdateCooldowns	16, 134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-106	1588	OnActionUpdateCooldowns	0, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-107	1697	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-108	3564	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-109	3720	OnActionUpdateCooldowns	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+104	996	EVENT_ACTION_UPDATE_COOLDOWNS	582, 700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+105	1562	EVENT_ACTION_UPDATE_COOLDOWNS	16, 134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+106	1588	EVENT_ACTION_UPDATE_COOLDOWNS	0, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+107	1697	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+108	3564	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+109	3720	EVENT_ACTION_UPDATE_COOLDOWNS	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
